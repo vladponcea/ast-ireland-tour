@@ -6,7 +6,6 @@ import {
   Hero,
   ValueProp,
   Roadmap,
-  PassportOffer,
   FAQ,
   Newsletter,
 } from "@/components/sections";
@@ -51,7 +50,6 @@ export default function Home() {
         <Hero onOpenModal={() => handleOpenModal()} />
         <ValueProp />
         <Roadmap onEventSelect={handleOpenModal} />
-        <PassportOffer onGetPassport={() => handleOpenModal()} />
         <Newsletter />
         <FAQ />
       </main>
