@@ -42,16 +42,17 @@ export function Hero({ onOpenModal }: HeroProps) {
         className="absolute inset-0 z-0"
         style={{ y: backgroundY }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background z-10" />
+        {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
           style={{
             backgroundImage: "url('/images/hero-bg.jpg')",
           }}
-        >
-          {/* Fallback gradient if no image */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background-secondary via-background to-background" />
-        </div>
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        {/* Bottom Gradient for smooth transition to white */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
       </motion.div>
 
       {/* Content */}
@@ -68,7 +69,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             className="flex items-center gap-3 mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
-            <span className="text-sm font-medium uppercase tracking-[0.2em] text-text-secondary">
+            <span className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
               The Irish Roadshow
             </span>
           </motion.div>
@@ -78,7 +79,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic gradient-text mb-4"
+            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic text-white mb-4"
           >
             The Irish Roadshow
           </motion.h1>
@@ -98,7 +99,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-text-secondary text-lg leading-relaxed mb-8 max-w-2xl"
+            className="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl"
           >
             With one mission: to create a transformational sales training experience
             never seen before in Ireland. A monthly event across 12 counties redefining
@@ -116,7 +117,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             <Button variant="primary" size="lg" href="#roadmap">
               View the Roadmap
             </Button>
-            <Button variant="outline" size="lg" onClick={onOpenModal}>
+            <Button variant="outline" size="lg" onClick={onOpenModal} className="border-white/50 text-white hover:border-white hover:text-white">
               Secure Your Seat
             </Button>
           </motion.div>
@@ -178,7 +179,7 @@ export function Hero({ onOpenModal }: HeroProps) {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <ChevronDown className="w-6 h-6 text-text-secondary" />
+          <ChevronDown className="w-6 h-6 text-white/60" />
         </motion.div>
       </motion.div>
     </section>
