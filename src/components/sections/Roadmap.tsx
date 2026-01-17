@@ -22,7 +22,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               </span>
             </div>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary mb-4">
-              The Roadshow
+              The Irish Roadshow
             </h2>
             <p className="font-display text-3xl sm:text-4xl italic text-accent">
               Road Map

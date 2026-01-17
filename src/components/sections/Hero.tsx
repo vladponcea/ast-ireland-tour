@@ -69,7 +69,7 @@ export function Hero({ onOpenModal }: HeroProps) {
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
             <span className="text-sm font-medium uppercase tracking-[0.2em] text-text-secondary">
-              The Roadshow
+              The Irish Roadshow
             </span>
           </motion.div>
 
@@ -80,7 +80,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic text-text-primary mb-4"
           >
-            The Roadshow
+            The Irish Roadshow
           </motion.h1>
 
           {/* Subheading */}

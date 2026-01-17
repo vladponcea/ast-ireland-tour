@@ -6,9 +6,9 @@ import { Accordion } from "../ui/Accordion";
 
 const faqItems = [
   {
-    question: "Who should attend the AST Roadshow?",
+    question: "Who should attend the AST Irish Roadshow?",
     answer:
-      "The AST Roadshow is designed for ambitious sales professionals, business owners, entrepreneurs, and anyone looking to elevate their sales skills and expand their network. Whether you're just starting out or you're a seasoned professional, our events are structured to deliver value at every level.",
+      "The AST Irish Roadshow is designed for ambitious sales professionals, business owners, entrepreneurs, and anyone looking to elevate their sales skills and expand their network. Whether you're just starting out or you're a seasoned professional, our events are structured to deliver value at every level.",
   },
   {
     question: "What's the schedule like?",
@@ -18,7 +18,7 @@ const faqItems = [
   {
     question: "What pricing options are available?",
     answer:
-      "We offer individual event tickets for each city, as well as our Roadshow Passport which gives you access to any 3 events of your choice at a significant discount. Early bird pricing is available for select events. Contact us for group rates.",
+      "We offer individual event tickets for each city, as well as our Irish Roadshow Passport which gives you access to any 3 events of your choice at a significant discount. Early bird pricing is available for select events. Contact us for group rates.",
   },
   {
     question: "What's the actual ROI of attending?",
@@ -28,7 +28,7 @@ const faqItems = [
   {
     question: "How is this different from other sales training?",
     answer:
-      "Most sales training is passive—you sit, listen, and forget. The AST Roadshow is immersive and action-oriented. You'll practice in real-time, get immediate feedback, and leave with strategies you can implement the next day. Plus, the connections you make are curated and valuable.",
+      "Most sales training is passive—you sit, listen, and forget. The AST Irish Roadshow is immersive and action-oriented. You'll practice in real-time, get immediate feedback, and leave with strategies you can implement the next day. Plus, the connections you make are curated and valuable.",
   },
   {
     question: "Why attend in-person when I can learn online?",
@@ -36,7 +36,7 @@ const faqItems = [
       "There's no substitute for in-person energy, connection, and accountability. Online learning is convenient but easily forgotten. When you invest your time and presence, you commit at a different level. The relationships built in-person lead to partnerships, referrals, and friendships that last.",
   },
   {
-    question: "What is the Roadshow Passport?",
+    question: "What is the Irish Roadshow Passport?",
     answer:
       "The Passport is our premium offering for committed professionals. It grants you VIP access to any 3 events of your choice, priority seating at all sessions, access to our exclusive Passport-holder community, and first access to sold-out events. It's the best value for anyone serious about transformation.",
   },

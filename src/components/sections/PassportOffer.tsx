@@ -27,7 +27,7 @@ export function PassportOffer({ onGetPassport }: PassportOfferProps) {
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
             Serious about your transformation? Don&apos;t just come to one. Get the
-            Roadshow Passport and secure VIP access to any 3 events of your
+            Irish Roadshow Passport and secure VIP access to any 3 events of your
             choice for a single price.
           </p>
         </FadeInUp>
@@ -41,7 +41,7 @@ export function PassportOffer({ onGetPassport }: PassportOfferProps) {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 pb-6 border-b border-text-secondary/20">
               <h3 className="text-2xl font-semibold text-text-primary mb-2 sm:mb-0">
-                Roadshow Passport
+                Irish Roadshow Passport
               </h3>
               <div className="text-right">
                 <p className="text-3xl font-bold text-accent">

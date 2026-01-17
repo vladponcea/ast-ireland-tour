@@ -12,7 +12,7 @@ export function generateGoogleCalendarUrl(details: CalendarDetails): string {
     text: title,
     dates: `${formatDate(startTime)}/${formatDate(endTime)}`,
     location: location,
-    details: `Join us for the AST Roadshow event in ${location}. A day of transformational sales training, networking, and our signature Closing Dinner.`,
+    details: `Join us for the AST Irish Roadshow event in ${location}. A day of transformational sales training, networking, and our signature Closing Dinner.`,
   });
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -33,7 +33,7 @@ DTSTART:${formatDate(startTime)}
 DTEND:${formatDate(endTime)}
 SUMMARY:${title}
 LOCATION:${location}
-DESCRIPTION:Join us for the AST Roadshow event in ${location}. A day of transformational sales training, networking, and our signature Closing Dinner.
+DESCRIPTION:Join us for the AST Irish Roadshow event in ${location}. A day of transformational sales training, networking, and our signature Closing Dinner.
 END:VEVENT
 END:VCALENDAR`;
 
@@ -54,7 +54,7 @@ export function generateOutlookCalendarUrl(details: CalendarDetails): string {
     startdt: formatDate(startTime),
     enddt: formatDate(endTime),
     location: location,
-    body: `Join us for the AST Roadshow event in ${location}. A day of transformational sales training, networking, and our signature Closing Dinner.`,
+    body: `Join us for the AST Irish Roadshow event in ${location}. A day of transformational sales training, networking, and our signature Closing Dinner.`,
   });
 
   return `https://outlook.live.com/calendar/0/deeplink/compose?${params.toString()}`;
@@ -69,14 +69,14 @@ export function downloadICSFile(details: CalendarDetails): void {
 
   const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//AST Roadshow//EN
+PRODID:-//AST Irish Roadshow//EN
 BEGIN:VEVENT
 UID:${Date.now()}@affinitysalestraining.ie
 DTSTART:${formatDate(startTime)}
 DTEND:${formatDate(endTime)}
 SUMMARY:${title}
 LOCATION:${location}
-DESCRIPTION:Join us for the AST Roadshow event in ${location}. A day of transformational sales training\\, networking\\, and our signature Closing Dinner.
+DESCRIPTION:Join us for the AST Irish Roadshow event in ${location}. A day of transformational sales training\\, networking\\, and our signature Closing Dinner.
 END:VEVENT
 END:VCALENDAR`;
 

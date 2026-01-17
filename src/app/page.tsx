@@ -5,7 +5,6 @@ import { Navbar, Footer } from "@/components/layout";
 import {
   Hero,
   ValueProp,
-  Differentiator,
   PhotoGallery,
   Roadmap,
   PassportOffer,
@@ -52,7 +51,6 @@ export default function Home() {
       <main>
         <Hero onOpenModal={() => handleOpenModal()} />
         <ValueProp />
-        <Differentiator />
         <PhotoGallery />
         <Roadmap onEventSelect={handleOpenModal} />
         <PassportOffer onGetPassport={() => handleOpenModal()} />
