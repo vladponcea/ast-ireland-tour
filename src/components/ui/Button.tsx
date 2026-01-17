@@ -16,7 +16,7 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    "bg-accent text-white hover:bg-accent/90 border-transparent",
+    "bg-gradient-to-r from-[#1c64ff] to-[#0a0a0a] text-white hover:opacity-90 border-transparent",
   secondary:
     "bg-background-secondary text-text-primary hover:bg-background-secondary/80 border-transparent",
   outline:
