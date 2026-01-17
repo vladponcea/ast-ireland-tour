@@ -1,0 +1,119 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Button } from "../ui/Button";
+
+interface NavbarProps {
+  onOpenModal: () => void;
+}
+
+const navLinks = [
+  { label: "Cities", href: "#roadmap" },
+  { label: "Schedule", href: "#roadmap" },
+  { label: "Newsletter", href: "#newsletter" },
+];
+
+export function Navbar({ onOpenModal }: NavbarProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <>
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled ? "glass border-b border-text-secondary/10" : ""
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <a
+              href="#"
+              className="text-sm font-bold tracking-[0.2em] uppercase text-text-primary hover:text-accent transition-colors"
+            >
+              Affinity Sales Training
+            </a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium tracking-wider uppercase text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <Button variant="outline" size="sm" onClick={onOpenModal}>
+                Secure your seat
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-text-primary"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-x-0 top-20 z-30 bg-background border-b border-text-secondary/10 md:hidden"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block text-lg font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <Button
+                variant="outline"
+                className="w-full mt-4"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  onOpenModal();
+                }}
+              >
+                Secure your seat
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
