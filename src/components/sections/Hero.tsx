@@ -78,7 +78,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic text-text-primary mb-4"
+            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic gradient-text mb-4"
           >
             The Irish Roadshow
           </motion.h1>

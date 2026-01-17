@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors - matching affinitysalestraining.com */
-  --color-background: #0f0f0f;
-  --color-background-secondary: #171717;
+  /* Colors - Light mode with blue accent */
+  --color-background: #ffffff;
+  --color-background-secondary: #f5f5f7;
   --color-accent: #1c64ff;
-  --color-accent-light: #4d8aff;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #b3c2cb;
+  --color-accent-dark: #0a0a0a;
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #6b7280;
   --color-status-live: #1c64ff;
   --color-status-waitlist: #F59E0B;
-  --color-status-coming: #6B7280;
+  --color-status-coming: #9ca3af;
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -37,18 +37,18 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-background-secondary);
+  background: #d1d5db;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: #9ca3af;
 }
 
 /* Selection styling */
 ::selection {
   background: var(--color-accent);
-  color: var(--color-background);
+  color: white;
 }
 
 /* Focus outline */
@@ -86,28 +86,37 @@ body {
   animation: fade-in-up 0.6s ease-out forwards;
 }
 
-/* Gradient text utility */
+/* Gradient text utility - blue to black */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  background: linear-gradient(135deg, #1c64ff 0%, #0a0a0a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Image overlay gradient */
+/* Alternative gradient - for headings */
+.gradient-text-accent {
+  background: linear-gradient(90deg, #1c64ff 0%, #0a0a0a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Image overlay gradient - light version */
 .image-gradient-overlay {
   background: linear-gradient(
     to top,
-    rgba(15, 15, 15, 0.95) 0%,
-    rgba(15, 15, 15, 0.7) 30%,
-    rgba(15, 15, 15, 0.3) 60%,
-    rgba(15, 15, 15, 0) 100%
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.7) 30%,
+    rgba(255, 255, 255, 0.3) 60%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
-/* Glass effect */
+/* Glass effect - light version */
 .glass {
-  background: rgba(26, 26, 26, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }

@@ -5,7 +5,6 @@ import { Navbar, Footer } from "@/components/layout";
 import {
   Hero,
   ValueProp,
-  PhotoGallery,
   Roadmap,
   PassportOffer,
   FAQ,
@@ -51,7 +50,6 @@ export default function Home() {
       <main>
         <Hero onOpenModal={() => handleOpenModal()} />
         <ValueProp />
-        <PhotoGallery />
         <Roadmap onEventSelect={handleOpenModal} />
         <PassportOffer onGetPassport={() => handleOpenModal()} />
         <Newsletter />
