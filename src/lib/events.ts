@@ -38,7 +38,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Cavan",
+      title: "AST Roadshow - Cavan",
       location: "Cavan, Ireland",
       startTime: "2026-01-18T09:00:00",
       endTime: "2026-01-18T18:00:00",
@@ -59,7 +59,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Limerick",
+      title: "AST Roadshow - Limerick",
       location: "Limerick, Ireland",
       startTime: "2026-02-15T09:00:00",
       endTime: "2026-02-15T18:00:00",
@@ -80,7 +80,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Cork",
+      title: "AST Roadshow - Cork",
       location: "Cork, Ireland",
       startTime: "2026-03-21T09:00:00",
       endTime: "2026-03-21T18:00:00",
@@ -101,7 +101,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Belfast",
+      title: "AST Roadshow - Belfast",
       location: "Belfast, Northern Ireland",
       startTime: "2026-04-18T09:00:00",
       endTime: "2026-04-18T18:00:00",
@@ -122,7 +122,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Meath",
+      title: "AST Roadshow - Meath",
       location: "County Meath, Ireland",
       startTime: "2026-05-16T09:00:00",
       endTime: "2026-05-16T18:00:00",
@@ -143,7 +143,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Wexford",
+      title: "AST Roadshow - Wexford",
       location: "Wexford, Ireland",
       startTime: "2026-06-20T09:00:00",
       endTime: "2026-06-20T18:00:00",
@@ -164,7 +164,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Galway",
+      title: "AST Roadshow - Galway",
       location: "Galway, Ireland",
       startTime: "2026-07-18T09:00:00",
       endTime: "2026-07-18T18:00:00",
@@ -185,7 +185,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Waterford",
+      title: "AST Roadshow - Waterford",
       location: "Waterford, Ireland",
       startTime: "2026-08-15T09:00:00",
       endTime: "2026-08-15T18:00:00",
@@ -206,7 +206,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Clare",
+      title: "AST Roadshow - Clare",
       location: "County Clare, Ireland",
       startTime: "2026-09-19T09:00:00",
       endTime: "2026-09-19T18:00:00",
@@ -227,7 +227,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Sligo",
+      title: "AST Roadshow - Sligo",
       location: "Sligo, Ireland",
       startTime: "2026-10-17T09:00:00",
       endTime: "2026-10-17T18:00:00",
@@ -248,7 +248,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Kerry",
+      title: "AST Roadshow - Kerry",
       location: "Kerry, Ireland",
       startTime: "2026-11-21T09:00:00",
       endTime: "2026-11-21T18:00:00",
@@ -269,7 +269,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Ireland Tour - Dublin",
+      title: "AST Roadshow - Dublin",
       location: "Dublin, Ireland",
       startTime: "2026-12-12T09:00:00",
       endTime: "2026-12-12T18:00:00",

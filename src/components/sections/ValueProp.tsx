@@ -24,7 +24,7 @@ export function ValueProp() {
                 No lasting change.
               </p>
               <p>
-                The AST Ireland Tour is different. We filter the noise. We create
+                The AST Roadshow is different. We filter the noise. We create
                 experiences.
               </p>
               <p>

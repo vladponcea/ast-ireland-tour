@@ -29,7 +29,7 @@ export function Differentiator() {
                 doesn&apos;t create real change.
               </p>
               <p>
-                The AST Ireland Tour is different. Real experiences. Real skills.
+                The AST Roadshow is different. Real experiences. Real skills.
                 Real connections that last.
               </p>
               <p>
