@@ -11,8 +11,6 @@ interface NavbarProps {
 
 const navLinks = [
   { label: "Cities", href: "#roadmap" },
-  { label: "Schedule", href: "#roadmap" },
-  { label: "Newsletter", href: "#newsletter" },
 ];
 
 export function Navbar({ onOpenModal }: NavbarProps) {

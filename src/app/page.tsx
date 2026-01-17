@@ -7,7 +7,6 @@ import {
   ValueProp,
   Roadmap,
   FAQ,
-  Newsletter,
 } from "@/components/sections";
 import { Modal, OptInForm } from "@/components/ui";
 import { Event } from "@/lib/events";
@@ -50,7 +49,6 @@ export default function Home() {
         <Hero onOpenModal={() => handleOpenModal()} />
         <ValueProp />
         <Roadmap onEventSelect={handleOpenModal} />
-        <Newsletter />
         <FAQ />
       </main>
 
