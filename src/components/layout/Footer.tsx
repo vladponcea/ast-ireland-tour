@@ -23,7 +23,7 @@ export function Footer() {
             {/* Center Column */}
             <div className="md:text-center">
               <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/affinitysalestraining/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-text-secondary hover:text-accent transition-colors group"
