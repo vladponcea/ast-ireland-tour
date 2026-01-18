@@ -15,18 +15,9 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
         {/* Header */}
         <FadeInUp>
           <div className="text-center mb-20">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm font-medium uppercase tracking-[0.2em] text-text-secondary">
-                Roadmap
-              </span>
-            </div>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary mb-4">
-              The Irish Roadshow
-            </h2>
-            <p className="font-display text-3xl sm:text-4xl italic text-accent">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary">
               Tour Dates &amp; Locations
-            </p>
+            </h2>
           </div>
         </FadeInUp>
 
