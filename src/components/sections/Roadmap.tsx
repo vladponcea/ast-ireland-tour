@@ -90,22 +90,6 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
         <div className="relative">
           {/* Animated line that goes around cards */}
           <div className="absolute left-0 right-0 top-0 bottom-0 hidden lg:block pointer-events-none" style={{ zIndex: 5 }}>
-            {/* Background SVG (gray line - always visible) */}
-            <svg
-              className="absolute w-full h-full"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              fill="none"
-            >
-              <path
-                d={snakePath}
-                stroke="#e5e7eb"
-                strokeWidth="0.5"
-                fill="none"
-                vectorEffect="non-scaling-stroke"
-              />
-            </svg>
-
             {/* Blue line SVG with clip mask - reveals from top as you scroll */}
             <motion.div
               className="absolute w-full h-full"
