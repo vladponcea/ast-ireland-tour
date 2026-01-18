@@ -18,10 +18,10 @@ export function ValueProp() {
           <FadeInUp delay={0.2}>
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed text-center">
               <p>
-                The Irish Roadshow is a 12-month, 12-county tour bringing salespeople and entrepreneurs together across Ireland.
+                The Irish Roadshow is a 12 month, 12 county tour bringing salespeople and entrepreneurs together across Ireland.
               </p>
               <p>
-                In partnership with YIE (Young Irish Entrepreneurs), each event is a practical, in-person workshop built for real networking, real learning, and real connections.
+                In partnership with YIE (Young Irish Entrepreneurs), each event is a practical, in-person workshop built for real networking, real learning and real connections.
               </p>
               <p>
                 Not a conference. Not a mastermind. Just interactive events with guest speakers from across Ireland, designed for people at every stage of the journey.
