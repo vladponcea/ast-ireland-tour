@@ -6,7 +6,7 @@ export function ValueProp() {
   return (
     <section className="py-24 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <FadeInUp>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary leading-tight text-center mb-12">
