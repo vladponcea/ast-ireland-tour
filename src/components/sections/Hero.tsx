@@ -101,7 +101,7 @@ export function Hero({ onOpenModal }: HeroProps) {
                   transition={{ delay: 0.7, duration: 0.6 }}
                   className="flex flex-wrap items-center gap-6"
                 >
-                  <Button variant="primary" size="lg" onClick={onOpenModal}>
+                  <Button variant="primary" size="lg" onClick={onOpenModal} className="!py-2 !px-4 !text-sm sm:!py-3 sm:!px-6 sm:!text-base">
                     Secure Your Seat
                   </Button>
                   <span className="text-[10px] sm:text-xs md:text-sm text-white/70">
