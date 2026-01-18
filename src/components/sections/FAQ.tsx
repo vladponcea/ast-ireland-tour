@@ -28,7 +28,7 @@ const faqItems = [
   {
     question: "How do I know if I'll fit in with other attendees?",
     answer:
-      "Our attendees share one thing in common: ambition. You'll find people at various stages of their journey, but everyone is there to grow. The atmosphere is supportive, not competitive. Past attendees consistently mention how welcoming and diverse our community is.",
+      "Past attendees of our events share one thing in common: ambition. You'll find people at various stages of their journey, but everyone is there to grow. The atmosphere is supportive, not competitive. Past attendees consistently mention how welcoming and diverse our community is.",
   },
 ];
 
