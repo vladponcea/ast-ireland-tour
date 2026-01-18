@@ -288,9 +288,11 @@ export function OptInForm({
               name="phone"
               placeholder="Phone Number"
               required
+              autoComplete="off"
               value={formData.phone}
               onChange={handleChange}
-              className="flex-1 px-2 py-3 bg-transparent text-text-primary placeholder:text-text-secondary/50 outline-none border-none min-w-0"
+              className="flex-1 px-2 py-3 bg-transparent text-text-primary placeholder:text-text-secondary/50 outline-none border-none min-w-0 focus:ring-0 focus:border-none shadow-none"
+              style={{ boxShadow: 'none', border: 'none', outline: 'none' }}
             />
           </div>
         </div>
