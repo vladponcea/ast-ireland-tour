@@ -174,10 +174,6 @@ function ThankYouContent() {
                   <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   <span>Add the event to your calendar</span>
                 </li>
-                <li className="flex items-start gap-3 text-text-secondary">
-                  <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                  <span>Get ready to transform your sales game</span>
-                </li>
               </>
             )}
           </ul>
