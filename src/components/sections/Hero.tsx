@@ -77,7 +77,7 @@ export function Hero({ onOpenModal }: HeroProps) {
                   className="text-white/90 text-base md:text-lg leading-relaxed mb-6 max-w-xl"
                 >
                   With one mission: to bring Ireland's sales and entrepreneurial community
-                  together through practical workshops, meaningful networking, and real-world
+                  together through practical workshops, meaningful networking and real-world
                   learning.
                 </motion.p>
 
