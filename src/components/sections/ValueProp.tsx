@@ -9,7 +9,7 @@ export function ValueProp() {
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <FadeInUp>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary leading-tight text-center mb-12">
+            <h2 className="font-display text-[1.4rem] sm:text-5xl md:text-6xl italic text-text-primary leading-tight text-center mb-12 whitespace-nowrap">
               What is the Irish Roadshow?
             </h2>
           </FadeInUp>
