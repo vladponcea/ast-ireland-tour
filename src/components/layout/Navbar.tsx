@@ -40,9 +40,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             {/* Logo */}
             <a
               href="#"
-              className={`text-sm font-bold tracking-[0.2em] uppercase transition-colors ${
-                isScrolled ? "text-text-primary hover:text-accent" : "text-text-primary hover:text-accent"
-              }`}
+              className="text-sm font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-[#1c64ff] to-[#0a0a0a] bg-clip-text text-transparent"
             >
               Affinity Sales Training
             </a>
