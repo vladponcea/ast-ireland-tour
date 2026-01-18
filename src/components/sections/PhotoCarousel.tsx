@@ -26,12 +26,12 @@ export function PhotoCarousel() {
             {[...topRowImages, ...topRowImages, ...topRowImages, ...topRowImages].map((image, index) => (
               <div
                 key={`top-${image.id}-${index}`}
-                className="flex-shrink-0 w-64 h-44 md:w-80 md:h-52 relative overflow-hidden rounded-lg"
+                className="flex-shrink-0 h-48 md:h-64 relative overflow-hidden rounded-lg"
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="h-full w-auto object-contain"
                 />
               </div>
             ))}
@@ -44,12 +44,12 @@ export function PhotoCarousel() {
             {[...bottomRowImages, ...bottomRowImages, ...bottomRowImages, ...bottomRowImages].map((image, index) => (
               <div
                 key={`bottom-${image.id}-${index}`}
-                className="flex-shrink-0 w-64 h-44 md:w-80 md:h-52 relative overflow-hidden rounded-lg"
+                className="flex-shrink-0 h-48 md:h-64 relative overflow-hidden rounded-lg"
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="h-full w-auto object-contain"
                 />
               </div>
             ))}
