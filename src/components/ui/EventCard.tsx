@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { Event } from "@/lib/events";
 import { StatusBadge } from "./StatusBadge";
 
@@ -77,13 +76,12 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           {/* CTA */}
           <motion.button
             onClick={() => onSelect(event)}
-            className={`inline-flex items-center gap-2 text-accent hover:text-text-primary transition-colors group mt-4 ${
-              isLeft ? "" : "lg:ml-auto"
+            className={`text-accent hover:text-text-primary transition-colors mt-4 ${
+              isLeft ? "" : "lg:ml-auto lg:block"
             }`}
-            whileHover={{ x: 5 }}
+            whileHover={{ scale: 1.02 }}
           >
             <span className="font-medium">{ctaText}</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </motion.button>
         </div>
       </div>

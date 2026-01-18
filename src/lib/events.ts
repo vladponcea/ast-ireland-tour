@@ -295,7 +295,7 @@ export function getStatusLabel(status: EventStatus): string {
     case "WAITLIST_OPEN":
       return "Waitlist Open";
     case "COMING_SOON":
-      return "Coming Soon";
+      return "Tickets Coming Soon";
   }
 }
 
