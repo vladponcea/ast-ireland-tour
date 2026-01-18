@@ -44,7 +44,6 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
             </div>
           )}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
       </motion.div>
 
       {/* Content */}
