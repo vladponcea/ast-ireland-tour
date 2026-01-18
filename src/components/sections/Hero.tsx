@@ -59,19 +59,6 @@ export function Hero({ onOpenModal }: HeroProps) {
           <div className="absolute inset-0 z-20 flex items-end">
             <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-6 md:pb-10">
               <div className="max-w-3xl">
-                {/* Label */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="flex items-center gap-3 mb-4"
-                >
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
-                  <span className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
-                    The Irish Roadshow
-                  </span>
-                </motion.div>
-
                 {/* Main Heading */}
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
