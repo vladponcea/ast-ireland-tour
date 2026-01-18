@@ -12,7 +12,7 @@ export function generateGoogleCalendarUrl(details: CalendarDetails): string {
     text: title,
     dates: `${formatDate(startTime)}/${formatDate(endTime)}`,
     location: location,
-    details: `Join us for the Irish Roadshow event in ${location}, Ireland.\n\n• Check your email for confirmation\n• Join the WhatsApp group using the link in the confirmation email\n• Add the event to your calendar`,
+    details: `Join us for the Irish Roadshow event in ${location}.\n\n• Check your email for confirmation\n• Join the WhatsApp group using the link in the confirmation email\n• Add the event to your calendar`,
   });
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -33,7 +33,7 @@ DTSTART:${formatDate(startTime)}
 DTEND:${formatDate(endTime)}
 SUMMARY:${title}
 LOCATION:${location}
-DESCRIPTION:Join us for the Irish Roadshow event in ${location}\\, Ireland.\\n\\n• Check your email for confirmation\\n• Join the WhatsApp group using the link in the confirmation email\\n• Add the event to your calendar
+DESCRIPTION:Join us for the Irish Roadshow event in ${location}.\\n\\n• Check your email for confirmation\\n• Join the WhatsApp group using the link in the confirmation email\\n• Add the event to your calendar
 END:VEVENT
 END:VCALENDAR`;
 
@@ -54,7 +54,7 @@ export function generateOutlookCalendarUrl(details: CalendarDetails): string {
     startdt: formatDate(startTime),
     enddt: formatDate(endTime),
     location: location,
-    body: `Join us for the Irish Roadshow event in ${location}, Ireland.\n\n• Check your email for confirmation\n• Join the WhatsApp group using the link in the confirmation email\n• Add the event to your calendar`,
+    body: `Join us for the Irish Roadshow event in ${location}.\n\n• Check your email for confirmation\n• Join the WhatsApp group using the link in the confirmation email\n• Add the event to your calendar`,
   });
 
   return `https://outlook.live.com/calendar/0/deeplink/compose?${params.toString()}`;
@@ -76,7 +76,7 @@ DTSTART:${formatDate(startTime)}
 DTEND:${formatDate(endTime)}
 SUMMARY:${title}
 LOCATION:${location}
-DESCRIPTION:Join us for the Irish Roadshow event in ${location}\\, Ireland.\\n\\n• Check your email for confirmation\\n• Join the WhatsApp group using the link in the confirmation email\\n• Add the event to your calendar
+DESCRIPTION:Join us for the Irish Roadshow event in ${location}.\\n\\n• Check your email for confirmation\\n• Join the WhatsApp group using the link in the confirmation email\\n• Add the event to your calendar
 END:VEVENT
 END:VCALENDAR`;
 
