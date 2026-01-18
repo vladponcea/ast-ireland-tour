@@ -89,7 +89,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-text-primary text-lg leading-relaxed mb-8 max-w-2xl"
+            className="text-white text-lg leading-relaxed mb-8 max-w-2xl"
           >
             With one mission: to create a transformational sales training experience
             never seen before in Ireland. A monthly event across 12 counties redefining
