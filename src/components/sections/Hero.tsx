@@ -90,8 +90,8 @@ export function Hero({ onOpenModal }: HeroProps) {
                   <Button variant="primary" size="lg" onClick={onOpenModal} className="!py-2 !px-4 !text-sm sm:!py-3 sm:!px-6 sm:!text-base mb-3">
                     Secure Your Seat
                   </Button>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-white/70">
-                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white font-medium">DESTINATIONS:</span> 12 Counties
+                  <p className="text-[8px] sm:text-xs md:text-sm text-white/70 whitespace-nowrap">
+                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person &nbsp;&nbsp; <span className="text-white font-medium">DESTINATIONS:</span> 12 Counties
                   </p>
                 </motion.div>
               </div>
