@@ -156,7 +156,7 @@ export function OptInForm({
     firstName: "",
     lastName: "",
     email: "",
-    phone: "+353 ",
+    phone: "",
   });
 
   const selectedEvent = events.find((e) => e.id === selectedEventId);
@@ -164,7 +164,12 @@ export function OptInForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedEvent) {
-      onSubmit(formData, selectedEvent);
+      // Combine country code with phone number
+      const fullFormData = {
+        ...formData,
+        phone: `${selectedCountry.code} ${formData.phone}`,
+      };
+      onSubmit(fullFormData, selectedEvent);
     }
   };
 
@@ -172,10 +177,6 @@ export function OptInForm({
     const country = countryCodes.find(c => c.country === e.target.value);
     if (country) {
       setSelectedCountry(country);
-      setFormData(prev => ({
-        ...prev,
-        phone: `${country.code} `,
-      }));
     }
   };
 
@@ -279,16 +280,19 @@ export function OptInForm({
                 </option>
               ))}
             </select>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Phone Number"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="flex-1 px-4 py-3 bg-background text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
-            />
+            <div className="flex flex-1 items-center bg-background">
+              <span className="pl-4 text-text-primary">{selectedCountry.code}</span>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                className="flex-1 px-2 py-3 bg-background text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
+              />
+            </div>
           </div>
         </div>
       </div>
