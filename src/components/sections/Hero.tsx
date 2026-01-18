@@ -44,7 +44,7 @@ export function Hero({ onOpenModal }: HeroProps) {
       >
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+          className="absolute inset-0 bg-contain bg-top bg-no-repeat md:bg-cover md:bg-center scale-110"
           style={{
             backgroundImage: "url('/images/hero-bg.jpg')",
           }}
