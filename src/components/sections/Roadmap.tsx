@@ -88,9 +88,19 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
 
         {/* Event Cards with animated line */}
         <div className="relative">
-          {/* Animated line that goes around cards */}
+          {/* Mobile: Simple vertical line on the left */}
+          <div className="absolute left-4 top-0 bottom-0 lg:hidden pointer-events-none" style={{ zIndex: 5 }}>
+            <motion.div
+              className="w-0.5 bg-[#6366f1] origin-top"
+              style={{
+                height: "100%",
+                scaleY: useTransform(scrollYProgress, [0, 1], [0, 1]),
+              }}
+            />
+          </div>
+
+          {/* Desktop: Snake path that goes around cards */}
           <div className="absolute left-0 right-0 top-0 bottom-0 hidden lg:block pointer-events-none" style={{ zIndex: 5 }}>
-            {/* Blue line SVG with clip mask - reveals from top as you scroll */}
             <motion.div
               className="absolute w-full h-full"
               style={{
