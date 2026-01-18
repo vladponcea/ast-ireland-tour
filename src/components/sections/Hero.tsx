@@ -115,7 +115,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             transition={{ delay: 0.7, duration: 0.6 }}
             className="text-xl sm:text-2xl text-text-primary font-medium"
           >
-            12 Months &bull; 12 Events &bull; 12 Counties
+            <span className="text-text-secondary">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-text-secondary">DESTINATIONS:</span> 12 COUNTIES &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-text-secondary">FORMAT:</span> IN-PERSON
           </motion.p>
         </div>
 
