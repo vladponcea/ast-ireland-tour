@@ -35,31 +35,31 @@ export function Hero({ onOpenModal }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-end overflow-hidden"
+      className="relative bg-white overflow-hidden"
     >
-      {/* Background Image with Parallax */}
-      <motion.div
-        className="absolute inset-0 z-0"
-        style={{ y: backgroundY }}
-      >
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-contain bg-top bg-no-repeat md:bg-cover md:bg-center scale-110"
-          style={{
-            backgroundImage: "url('/images/hero-bg.jpg')",
-          }}
-        />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-        {/* Bottom Gradient for smooth transition to white */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-      </motion.div>
+      {/* Image Container */}
+      <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+        <motion.div
+          className="absolute inset-0 z-0"
+          style={{ y: backgroundY }}
+        >
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/images/hero-bg.jpg')",
+            }}
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+        </motion.div>
 
-      {/* Content */}
-      <motion.div
-        style={{ opacity }}
-        className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-32"
-      >
+        {/* Content overlaid on image */}
+        <motion.div
+          style={{ opacity }}
+          className="absolute inset-0 z-20 flex items-end"
+        >
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12">
         <div className="max-w-3xl">
           {/* Label */}
           <motion.div
@@ -113,18 +113,20 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-sm sm:text-base text-text-primary font-medium"
+            className="text-sm sm:text-base text-white/80 font-medium"
           >
-            <span className="text-text-secondary">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; 12 MONTHS &bull; 12 EVENTS &bull; 12 COUNTIES &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-text-secondary">FORMAT:</span> IN-PERSON
+            <span className="text-white/60">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; 12 MONTHS &bull; 12 EVENTS &bull; 12 COUNTIES &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white/60">FORMAT:</span> IN-PERSON
           </motion.p>
         </div>
+          </div>
+        </motion.div>
 
         {/* Cycling City Name - Bottom Right */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-20 right-8 text-right hidden lg:block"
+          className="absolute bottom-8 md:bottom-12 right-8 text-right hidden lg:block z-20"
         >
           <motion.div
             key={currentCityIndex}
@@ -133,30 +135,15 @@ export function Hero({ onOpenModal }: HeroProps) {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-text-secondary text-sm uppercase tracking-widest mb-1">
+            <p className="text-white/60 text-sm uppercase tracking-widest mb-1">
               {currentEvent.month} 2026
             </p>
-            <p className="font-display text-3xl italic text-text-primary">
+            <p className="font-display text-3xl italic text-white">
               {currentEvent.city}
             </p>
           </motion.div>
         </motion.div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <ChevronDown className="w-6 h-6 text-white/60" />
-        </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }
