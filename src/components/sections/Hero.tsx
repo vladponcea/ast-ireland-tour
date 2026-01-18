@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
 import { Button } from "../ui/Button";
 import { events } from "@/lib/events";
 
@@ -18,7 +17,6 @@ export function Hero({ onOpenModal }: HeroProps) {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Cycling city display
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
@@ -35,61 +33,100 @@ export function Hero({ onOpenModal }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative bg-white overflow-hidden"
+      className="bg-white pt-24 md:pt-28"
     >
-      {/* Image Container */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
-        <motion.div
-          className="absolute inset-0 z-0"
-          style={{ y: backgroundY }}
-        >
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/images/hero-bg.jpg')",
-            }}
-          />
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/50" />
-        </motion.div>
-
-        {/* Content overlaid on image */}
-        <motion.div
-          style={{ opacity }}
-          className="absolute inset-0 z-20 flex items-end"
-        >
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12">
-        <div className="max-w-3xl">
-          {/* Label */}
+      {/* Image Container with rounded corners */}
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="relative w-full aspect-[16/10] md:aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="flex items-center gap-3 mb-6"
+            className="absolute inset-0 z-0"
+            style={{ y: backgroundY }}
           >
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
-            <span className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
-              The Irish Roadshow
-            </span>
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+              style={{
+                backgroundImage: "url('/images/hero-bg.jpg')",
+              }}
+            />
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/40" />
           </motion.div>
 
-          {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic text-white mb-4"
-          >
-            The Irish Roadshow
-          </motion.h1>
+          {/* Content overlaid on image */}
+          <div className="absolute inset-0 z-20 flex items-end">
+            <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-6 md:pb-10">
+              <div className="max-w-3xl">
+                {/* Label */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="flex items-center gap-3 mb-4"
+                >
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
+                  <span className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+                    The Irish Roadshow
+                  </span>
+                </motion.div>
 
+                {/* Main Heading */}
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.8 }}
+                  className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic text-white mb-3"
+                >
+                  The Irish Roadshow
+                </motion.h1>
+
+                {/* Stats line */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                  className="text-sm text-white/70 font-medium"
+                >
+                  12 Months &bull; 12 Events &bull; 12 Counties
+                </motion.p>
+              </div>
+            </div>
+
+            {/* Cycling City Name - Bottom Right */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.6 }}
+              className="absolute bottom-6 md:bottom-10 right-6 md:right-12 text-right hidden lg:block"
+            >
+              <motion.div
+                key={currentCityIndex}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="text-white/60 text-sm uppercase tracking-widest mb-1">
+                  {currentEvent.month} 2026
+                </p>
+                <p className="font-display text-2xl italic text-white">
+                  {currentEvent.city}
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content below image */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="max-w-3xl">
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-white text-lg leading-relaxed mb-8 max-w-2xl"
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-text-secondary text-lg leading-relaxed mb-8"
           >
             With one mission: to bring Ireland's sales and entrepreneurial community
             together through practical workshops, meaningful networking, and real-world
@@ -100,49 +137,17 @@ export function Hero({ onOpenModal }: HeroProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-wrap gap-4 mb-8"
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="flex flex-wrap items-center gap-6"
           >
             <Button variant="primary" size="lg" onClick={onOpenModal}>
               Secure Your Seat
             </Button>
+            <span className="text-sm text-text-secondary">
+              <span className="text-text-primary font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-text-primary font-medium">FORMAT:</span> In-Person
+            </span>
           </motion.div>
-
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-sm sm:text-base text-white/80 font-medium"
-          >
-            <span className="text-white/60">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; 12 MONTHS &bull; 12 EVENTS &bull; 12 COUNTIES &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white/60">FORMAT:</span> IN-PERSON
-          </motion.p>
         </div>
-          </div>
-        </motion.div>
-
-        {/* Cycling City Name - Bottom Right */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-8 md:bottom-12 right-8 text-right hidden lg:block z-20"
-        >
-          <motion.div
-            key={currentCityIndex}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-white/60 text-sm uppercase tracking-widest mb-1">
-              {currentEvent.month} 2026
-            </p>
-            <p className="font-display text-3xl italic text-white">
-              {currentEvent.city}
-            </p>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
