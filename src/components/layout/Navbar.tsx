@@ -44,7 +44,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
                 isScrolled ? "text-text-primary hover:text-accent" : "text-white hover:text-white/80"
               }`}
             >
-              Affinity Sales Training
+              AST x YIE
             </a>
 
             {/* Desktop Navigation */}
