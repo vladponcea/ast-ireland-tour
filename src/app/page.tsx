@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Navbar, Footer } from "@/components/layout";
 import {
   Hero,
+  PhotoCarousel,
   ValueProp,
   Roadmap,
   FAQ,
@@ -47,6 +48,7 @@ export default function Home() {
 
       <main>
         <Hero onOpenModal={() => handleOpenModal()} />
+        <PhotoCarousel />
         <ValueProp />
         <Roadmap onEventSelect={handleOpenModal} />
         <FAQ />

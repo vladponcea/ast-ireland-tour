@@ -1,4 +1,5 @@
 export { Hero } from "./Hero";
+export { PhotoCarousel } from "./PhotoCarousel";
 export { ValueProp } from "./ValueProp";
 export { Differentiator } from "./Differentiator";
 export { PhotoGallery } from "./PhotoGallery";
