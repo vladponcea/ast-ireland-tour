@@ -268,11 +268,12 @@ export function OptInForm({
           <label htmlFor="phone" className="sr-only">
             Phone
           </label>
-          <div className="flex flex-col sm:flex-row border border-text-secondary/30 rounded-sm focus-within:border-accent transition-colors overflow-hidden">
+          <div className="flex items-center border border-text-secondary/30 rounded-sm focus-within:border-accent transition-colors overflow-hidden bg-background">
             <select
               value={selectedCountry.country}
               onChange={handleCountryChange}
-              className="w-full sm:w-28 px-2 py-3 bg-background text-text-primary focus:outline-none text-sm"
+              className="w-28 px-2 py-3 bg-transparent text-text-primary focus:outline-none text-sm appearance-none cursor-pointer"
+              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M3 5l3 3 3-3'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 8px center' }}
             >
               {countryCodes.map((country) => (
                 <option key={`${country.country}-${country.code}`} value={country.country}>
@@ -280,19 +281,17 @@ export function OptInForm({
                 </option>
               ))}
             </select>
-            <div className="flex flex-1 items-center bg-background">
-              <span className="pl-4 text-text-primary">{selectedCountry.code}</span>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Phone Number"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                className="flex-1 px-2 py-3 bg-background text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
-              />
-            </div>
+            <span className="text-text-primary">{selectedCountry.code}</span>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              className="flex-1 px-2 py-3 bg-transparent text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
+            />
           </div>
         </div>
       </div>
