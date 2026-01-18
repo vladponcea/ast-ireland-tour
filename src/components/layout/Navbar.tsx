@@ -53,7 +53,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
                 isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <span className="font-display text-lg italic text-text-primary">
+              <span className="font-display text-2xl lg:text-3xl italic text-text-primary">
                 The Irish Roadshow
               </span>
             </div>
