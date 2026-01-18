@@ -17,7 +17,7 @@ export function PhotoCarousel() {
   return (
     <section className="py-16 bg-background overflow-hidden">
       {/* Title */}
-      <h2 className="font-display text-2xl sm:text-5xl md:text-6xl italic text-text-primary text-center mb-12 whitespace-nowrap">
+      <h2 className="font-display text-[1.7rem] sm:text-5xl md:text-6xl italic text-text-primary text-center mb-12 whitespace-nowrap">
         Our Previous Events
       </h2>
 
