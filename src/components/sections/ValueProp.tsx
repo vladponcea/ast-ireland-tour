@@ -4,7 +4,7 @@ import { FadeInUp } from "../animations";
 
 export function ValueProp() {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-12 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}

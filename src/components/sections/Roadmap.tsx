@@ -75,7 +75,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
   const clipProgress = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <section id="roadmap" className="py-24 md:py-32 bg-background" ref={containerRef}>
+    <section id="roadmap" className="py-12 md:py-32 bg-background" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <FadeInUp>
