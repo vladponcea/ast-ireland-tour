@@ -16,7 +16,7 @@ export function ValueProp() {
 
           {/* Body Text */}
           <FadeInUp delay={0.2}>
-            <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
+            <div className="space-y-6 text-text-secondary text-lg leading-relaxed text-center">
               <p>
                 The Irish Roadshow is a 12-month, 12-county tour bringing salespeople and entrepreneurs together across Ireland.
               </p>
