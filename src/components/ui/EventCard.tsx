@@ -45,12 +45,6 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           )}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-        {/* Brand Label */}
-        <div className="absolute top-0 left-0 right-0 bg-[#0a1628] py-3 px-4">
-          <span className="text-white text-xs font-medium tracking-[0.2em] uppercase">
-            AST x YIE
-          </span>
-        </div>
       </motion.div>
 
       {/* Content */}
