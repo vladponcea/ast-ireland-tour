@@ -96,14 +96,13 @@ export function Hero({ onOpenModal }: HeroProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.6 }}
-                  className="flex flex-wrap items-center gap-6"
                 >
-                  <Button variant="primary" size="lg" onClick={onOpenModal} className="!py-2 !px-4 !text-sm sm:!py-3 sm:!px-6 sm:!text-base">
+                  <Button variant="primary" size="lg" onClick={onOpenModal} className="!py-2 !px-4 !text-sm sm:!py-3 sm:!px-6 sm:!text-base mb-3">
                     Secure Your Seat
                   </Button>
-                  <span className="text-[10px] sm:text-xs md:text-sm text-white/70">
+                  <p className="text-[10px] sm:text-xs md:text-sm text-white/70">
                     <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person
-                  </span>
+                  </p>
                 </motion.div>
               </div>
             </div>
