@@ -37,7 +37,7 @@ export function Hero({ onOpenModal }: HeroProps) {
     >
       {/* Image Container with rounded corners */}
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="relative w-full aspect-[16/10] md:aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden">
+        <div className="relative w-full aspect-[3/4] sm:aspect-[16/10] md:aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden">
           <motion.div
             className="absolute inset-0 z-0"
             style={{ y: backgroundY }}
