@@ -62,64 +62,79 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
         {/* Event Cards with animated line */}
         <div className="relative">
           {/* Animated SVG Snake Line */}
-          <svg
-            className="absolute inset-0 w-full h-full hidden md:block pointer-events-none"
-            style={{ zIndex: 0 }}
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#6366f1" />
-                <stop offset="100%" stopColor="#6366f1" />
-              </linearGradient>
-            </defs>
-            {/* Background path (gray) */}
-            <motion.path
-              d={`M 50% 0
-                  Q 10% 4%, 10% 8%
-                  Q 10% 12%, 50% 16%
-                  Q 90% 20%, 90% 24%
-                  Q 90% 28%, 50% 32%
-                  Q 10% 36%, 10% 40%
-                  Q 10% 44%, 50% 48%
-                  Q 90% 52%, 90% 56%
-                  Q 90% 60%, 50% 64%
-                  Q 10% 68%, 10% 72%
-                  Q 10% 76%, 50% 80%
-                  Q 90% 84%, 90% 88%
-                  Q 90% 92%, 50% 96%
-                  L 50% 100%`}
-              stroke="#e5e7eb"
-              strokeWidth="3"
+          <div className="absolute left-0 right-0 top-0 bottom-0 hidden md:block pointer-events-none overflow-visible" style={{ zIndex: 1 }}>
+            <svg
+              className="absolute left-0 top-0 w-full h-full"
+              viewBox="0 0 1000 12000"
+              preserveAspectRatio="none"
               fill="none"
-              vectorEffect="non-scaling-stroke"
-            />
-            {/* Animated path (blue) */}
-            <motion.path
-              d={`M 50% 0
-                  Q 10% 4%, 10% 8%
-                  Q 10% 12%, 50% 16%
-                  Q 90% 20%, 90% 24%
-                  Q 90% 28%, 50% 32%
-                  Q 10% 36%, 10% 40%
-                  Q 10% 44%, 50% 48%
-                  Q 90% 52%, 90% 56%
-                  Q 90% 60%, 50% 64%
-                  Q 10% 68%, 10% 72%
-                  Q 10% 76%, 50% 80%
-                  Q 90% 84%, 90% 88%
-                  Q 90% 92%, 50% 96%
-                  L 50% 100%`}
-              stroke="#6366f1"
-              strokeWidth="3"
-              fill="none"
-              vectorEffect="non-scaling-stroke"
-              style={{
-                pathLength,
-              }}
-              strokeLinecap="round"
-            />
-          </svg>
+            >
+              {/* Background path (gray) */}
+              <path
+                d={`M 500 0
+                    C 100 200, 100 400, 100 500
+                    C 100 600, 100 800, 500 1000
+                    C 900 1200, 900 1400, 900 1500
+                    C 900 1600, 900 1800, 500 2000
+                    C 100 2200, 100 2400, 100 2500
+                    C 100 2600, 100 2800, 500 3000
+                    C 900 3200, 900 3400, 900 3500
+                    C 900 3600, 900 3800, 500 4000
+                    C 100 4200, 100 4400, 100 4500
+                    C 100 4600, 100 4800, 500 5000
+                    C 900 5200, 900 5400, 900 5500
+                    C 900 5600, 900 5800, 500 6000
+                    C 100 6200, 100 6400, 100 6500
+                    C 100 6600, 100 6800, 500 7000
+                    C 900 7200, 900 7400, 900 7500
+                    C 900 7600, 900 7800, 500 8000
+                    C 100 8200, 100 8400, 100 8500
+                    C 100 8600, 100 8800, 500 9000
+                    C 900 9200, 900 9400, 900 9500
+                    C 900 9600, 900 9800, 500 10000
+                    C 100 10200, 100 10400, 100 10500
+                    C 100 10600, 100 10800, 500 11000
+                    L 500 12000`}
+                stroke="#e5e7eb"
+                strokeWidth="8"
+                fill="none"
+              />
+              {/* Animated path (blue) */}
+              <motion.path
+                d={`M 500 0
+                    C 100 200, 100 400, 100 500
+                    C 100 600, 100 800, 500 1000
+                    C 900 1200, 900 1400, 900 1500
+                    C 900 1600, 900 1800, 500 2000
+                    C 100 2200, 100 2400, 100 2500
+                    C 100 2600, 100 2800, 500 3000
+                    C 900 3200, 900 3400, 900 3500
+                    C 900 3600, 900 3800, 500 4000
+                    C 100 4200, 100 4400, 100 4500
+                    C 100 4600, 100 4800, 500 5000
+                    C 900 5200, 900 5400, 900 5500
+                    C 900 5600, 900 5800, 500 6000
+                    C 100 6200, 100 6400, 100 6500
+                    C 100 6600, 100 6800, 500 7000
+                    C 900 7200, 900 7400, 900 7500
+                    C 900 7600, 900 7800, 500 8000
+                    C 100 8200, 100 8400, 100 8500
+                    C 100 8600, 100 8800, 500 9000
+                    C 900 9200, 900 9400, 900 9500
+                    C 900 9600, 900 9800, 500 10000
+                    C 100 10200, 100 10400, 100 10500
+                    C 100 10600, 100 10800, 500 11000
+                    L 500 12000`}
+                stroke="#6366f1"
+                strokeWidth="8"
+                fill="none"
+                style={{
+                  pathLength,
+                }}
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
 
           {/* Event cards */}
           <div className="space-y-24 md:space-y-32 relative z-10">
