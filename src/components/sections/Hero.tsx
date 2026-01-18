@@ -104,8 +104,8 @@ export function Hero({ onOpenModal }: HeroProps) {
                   <Button variant="primary" size="lg" onClick={onOpenModal}>
                     Secure Your Seat
                   </Button>
-                  <span className="text-sm text-white/70">
-                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; 12 Months &bull; 12 Events &bull; 12 Counties &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person
+                  <span className="text-[10px] sm:text-xs md:text-sm text-white/70">
+                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp; 12 Months &bull; 12 Events &bull; 12 Counties &nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person
                   </span>
                 </motion.div>
               </div>
