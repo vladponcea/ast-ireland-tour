@@ -70,7 +70,7 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           </h3>
 
           {/* Description */}
-          <p className="text-text-secondary leading-relaxed max-w-md">
+          <p className={`text-text-secondary leading-relaxed max-w-md ${isLeft ? "" : "lg:ml-auto"}`}>
             {event.description}
           </p>
 
