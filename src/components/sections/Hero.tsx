@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Button } from "../ui/Button";
 import { events } from "@/lib/events";
@@ -42,13 +42,20 @@ export function Hero({ onOpenModal }: HeroProps) {
             className="absolute inset-0 z-0"
             style={{ y: backgroundY }}
           >
-            {/* Background Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-              style={{
-                backgroundImage: "url('/images/hero-bg.jpg')",
-              }}
-            />
+            {/* Background Image with transition */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentCityIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+                style={{
+                  backgroundImage: `url('${currentEvent.image}')`,
+                }}
+              />
+            </AnimatePresence>
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/30" />
             {/* Bottom Gradient for text visibility */}
