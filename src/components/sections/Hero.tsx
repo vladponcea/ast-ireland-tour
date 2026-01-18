@@ -85,10 +85,37 @@ export function Hero({ onOpenModal }: HeroProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5, duration: 0.6 }}
-                  className="text-sm text-white/70 font-medium"
+                  className="text-sm text-white/70 font-medium mb-6"
                 >
                   12 Months &bull; 12 Events &bull; 12 Counties
                 </motion.p>
+
+                {/* Description */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                  className="text-white/90 text-base md:text-lg leading-relaxed mb-6 max-w-xl"
+                >
+                  With one mission: to bring Ireland's sales and entrepreneurial community
+                  together through practical workshops, meaningful networking, and real-world
+                  learning.
+                </motion.p>
+
+                {/* CTA Button and info */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                  className="flex flex-wrap items-center gap-6"
+                >
+                  <Button variant="primary" size="lg" onClick={onOpenModal}>
+                    Secure Your Seat
+                  </Button>
+                  <span className="text-sm text-white/70">
+                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person
+                  </span>
+                </motion.div>
               </div>
             </div>
 
@@ -118,37 +145,6 @@ export function Hero({ onOpenModal }: HeroProps) {
         </div>
       </div>
 
-      {/* Content below image */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="max-w-3xl">
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-text-secondary text-lg leading-relaxed mb-8"
-          >
-            With one mission: to bring Ireland's sales and entrepreneurial community
-            together through practical workshops, meaningful networking, and real-world
-            learning.
-          </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="flex flex-wrap items-center gap-6"
-          >
-            <Button variant="primary" size="lg" onClick={onOpenModal}>
-              Secure Your Seat
-            </Button>
-            <span className="text-sm text-text-secondary">
-              <span className="text-text-primary font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-text-primary font-medium">FORMAT:</span> In-Person
-            </span>
-          </motion.div>
-        </div>
-      </div>
     </section>
   );
 }
