@@ -268,7 +268,7 @@ export function OptInForm({
           <label htmlFor="phone" className="sr-only">
             Phone
           </label>
-          <div className="flex items-center border border-text-secondary/30 rounded-sm focus-within:border-accent transition-colors overflow-hidden bg-background">
+          <div className="flex items-center border border-text-secondary/30 rounded-sm overflow-hidden bg-background">
             <select
               value={selectedCountry.country}
               onChange={handleCountryChange}
