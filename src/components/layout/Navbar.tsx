@@ -10,7 +10,7 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { label: "Cities", href: "#roadmap" },
+  { label: "Counties", href: "#roadmap" },
 ];
 
 export function Navbar({ onOpenModal }: NavbarProps) {
