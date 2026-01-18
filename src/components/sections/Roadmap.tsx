@@ -71,7 +71,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
     offset: ["start 80%", "end 20%"],
   });
 
-  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const strokeDashoffset = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <section id="roadmap" className="py-24 md:py-32 bg-background" ref={containerRef}>
@@ -110,9 +110,11 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
                 strokeWidth="0.8"
                 fill="none"
                 vectorEffect="non-scaling-stroke"
+                strokeDasharray="1"
                 style={{
-                  pathLength,
+                  strokeDashoffset,
                 }}
+                pathLength="1"
               />
             </svg>
           </div>
