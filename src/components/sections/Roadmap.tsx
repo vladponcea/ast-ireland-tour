@@ -25,7 +25,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               The Irish Roadshow
             </h2>
             <p className="font-display text-3xl sm:text-4xl italic text-accent">
-              Road Map
+              Tour Dates &amp; Locations
             </p>
           </div>
         </FadeInUp>
