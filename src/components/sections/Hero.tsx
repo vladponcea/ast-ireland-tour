@@ -91,9 +91,9 @@ export function Hero({ onOpenModal }: HeroProps) {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-white text-lg leading-relaxed mb-8 max-w-2xl"
           >
-            With one mission: to create a transformational sales training experience
-            never seen before in Ireland. A monthly event across 12 counties redefining
-            networking through Workshops, Masterminds, and Live Training.
+            With one mission: to bring Ireland's sales and entrepreneurial community
+            together through practical workshops, meaningful networking, and real-world
+            learning — across 12 counties, 12 months, and 12 live events.
           </motion.p>
 
           {/* CTA Button */}
