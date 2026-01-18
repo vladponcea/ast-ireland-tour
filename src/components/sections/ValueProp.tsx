@@ -6,15 +6,15 @@ export function ValueProp() {
   return (
     <section className="py-24 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Column - Heading */}
+        <div className="max-w-4xl mx-auto">
+          {/* Heading */}
           <FadeInUp>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary leading-tight">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary leading-tight text-center mb-12">
               What is the Irish Roadshow?
             </h2>
           </FadeInUp>
 
-          {/* Right Column - Body Text */}
+          {/* Body Text */}
           <FadeInUp delay={0.2}>
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
