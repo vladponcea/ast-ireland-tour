@@ -267,15 +267,15 @@ export function OptInForm({
           <label htmlFor="phone" className="sr-only">
             Phone
           </label>
-          <div className="flex border border-text-secondary/30 rounded-sm focus-within:border-accent transition-colors">
+          <div className="flex flex-col sm:flex-row border border-text-secondary/30 rounded-sm focus-within:border-accent transition-colors overflow-hidden">
             <select
               value={selectedCountry.country}
               onChange={handleCountryChange}
-              className="w-32 px-2 py-3 bg-background text-text-primary focus:outline-none text-sm border-r border-text-secondary/30 rounded-l-sm"
+              className="w-full sm:w-28 px-2 py-3 bg-background text-text-primary focus:outline-none text-sm border-b sm:border-b-0 sm:border-r border-text-secondary/30"
             >
               {countryCodes.map((country) => (
                 <option key={`${country.country}-${country.code}`} value={country.country}>
-                  {country.flag} {country.country}
+                  {country.flag} {country.code}
                 </option>
               ))}
             </select>
@@ -286,7 +286,7 @@ export function OptInForm({
               placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
-              className="flex-1 px-4 py-3 bg-background text-text-primary placeholder:text-text-secondary/50 focus:outline-none rounded-r-sm"
+              className="flex-1 px-4 py-3 bg-background text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
             />
           </div>
         </div>

@@ -58,7 +58,7 @@ export function Modal({ isOpen, onClose, children, title }: ModalProps) {
             className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
           >
             <div
-              className="relative w-full max-w-lg bg-background-secondary border border-text-secondary/20 rounded-lg shadow-2xl pointer-events-auto"
+              className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-background-secondary border border-text-secondary/20 rounded-lg shadow-2xl pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
