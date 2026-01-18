@@ -204,7 +204,7 @@ export function OptInForm({
         >
           {events.map((event) => (
             <option key={event.id} value={event.id}>
-              {event.month} - {event.city} ({getStatusLabel(event.status)})
+              {event.date} - {event.city} ({getStatusLabel(event.status)})
             </option>
           ))}
         </select>
