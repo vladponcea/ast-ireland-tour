@@ -80,7 +80,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
         {/* Header */}
         <FadeInUp>
           <div className="text-center mb-20">
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary">
+            <h2 className="font-display text-3xl sm:text-5xl md:text-6xl italic text-text-primary whitespace-nowrap">
               Tour Dates &amp; Locations
             </h2>
           </div>
