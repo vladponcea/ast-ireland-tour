@@ -272,7 +272,7 @@ export function OptInForm({
             <select
               value={selectedCountry.country}
               onChange={handleCountryChange}
-              className="w-28 px-2 py-3 bg-transparent text-text-primary focus:outline-none text-sm appearance-none cursor-pointer"
+              className="w-28 px-2 py-3 bg-transparent text-text-primary text-sm appearance-none cursor-pointer outline-none border-none"
               style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M3 5l3 3 3-3'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 8px center' }}
             >
               {countryCodes.map((country) => (
@@ -290,7 +290,7 @@ export function OptInForm({
               required
               value={formData.phone}
               onChange={handleChange}
-              className="flex-1 px-2 py-3 bg-transparent text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
+              className="flex-1 px-2 py-3 bg-transparent text-text-primary placeholder:text-text-secondary/50 outline-none border-none min-w-0"
             />
           </div>
         </div>
