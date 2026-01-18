@@ -114,10 +114,10 @@ export function Hero({ onOpenModal }: HeroProps) {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-wrap gap-4 mb-12"
           >
-            <Button variant="primary" size="lg" href="#roadmap">
+            <Button variant="outline" size="lg" href="#roadmap" className="border-white/50 text-white hover:border-white hover:text-white">
               View the Roadmap
             </Button>
-            <Button variant="outline" size="lg" onClick={onOpenModal} className="border-white/50 text-white hover:border-white hover:text-white">
+            <Button variant="primary" size="lg" onClick={onOpenModal}>
               Secure Your Seat
             </Button>
           </motion.div>
