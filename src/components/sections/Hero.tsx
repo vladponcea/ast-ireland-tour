@@ -113,7 +113,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-xl sm:text-2xl text-text-primary font-medium"
+            className="text-sm sm:text-base text-text-primary font-medium"
           >
             <span className="text-text-secondary">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; 12 MONTHS &bull; 12 EVENTS &bull; 12 COUNTIES &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-text-secondary">FORMAT:</span> IN-PERSON
           </motion.p>
