@@ -5,6 +5,21 @@ import { motion } from "framer-motion";
 import { Button } from "./Button";
 import { events, Event, getStatusLabel } from "@/lib/events";
 
+const countryCodes = [
+  { code: "+353", country: "Ireland", flag: "🇮🇪" },
+  { code: "+44", country: "UK", flag: "🇬🇧" },
+  { code: "+1", country: "USA", flag: "🇺🇸" },
+  { code: "+49", country: "Germany", flag: "🇩🇪" },
+  { code: "+33", country: "France", flag: "🇫🇷" },
+  { code: "+34", country: "Spain", flag: "🇪🇸" },
+  { code: "+39", country: "Italy", flag: "🇮🇹" },
+  { code: "+31", country: "Netherlands", flag: "🇳🇱" },
+  { code: "+32", country: "Belgium", flag: "🇧🇪" },
+  { code: "+48", country: "Poland", flag: "🇵🇱" },
+  { code: "+61", country: "Australia", flag: "🇦🇺" },
+  { code: "+64", country: "New Zealand", flag: "🇳🇿" },
+];
+
 interface OptInFormProps {
   onSubmit: (data: FormData, selectedEvent: Event) => void;
   isLoading?: boolean;
@@ -26,6 +41,7 @@ export function OptInForm({
   const [selectedEventId, setSelectedEventId] = useState(
     preSelectedEventId || events[0]?.id || ""
   );
+  const [countryCode, setCountryCode] = useState("+353");
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -38,7 +54,11 @@ export function OptInForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedEvent) {
-      onSubmit(formData, selectedEvent);
+      const submissionData = {
+        ...formData,
+        phone: formData.phone ? `${countryCode} ${formData.phone}` : "",
+      };
+      onSubmit(submissionData, selectedEvent);
     }
   };
 
@@ -130,15 +150,28 @@ export function OptInForm({
           <label htmlFor="phone" className="sr-only">
             Phone
           </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent focus:outline-none transition-colors"
-          />
+          <div className="flex gap-2">
+            <select
+              value={countryCode}
+              onChange={(e) => setCountryCode(e.target.value)}
+              className="w-28 px-2 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary focus:border-accent focus:outline-none transition-colors text-sm"
+            >
+              {countryCodes.map((country) => (
+                <option key={country.code} value={country.code}>
+                  {country.flag} {country.code}
+                </option>
+              ))}
+            </select>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              className="flex-1 px-4 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent focus:outline-none transition-colors"
+            />
+          </div>
         </div>
       </div>
 
