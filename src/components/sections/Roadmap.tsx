@@ -71,7 +71,8 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
     offset: ["start 80%", "end 20%"],
   });
 
-  const strokeDashoffset = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  // Convert scroll progress to clip percentage (0% to 100%)
+  const clipProgress = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
     <section id="roadmap" className="py-24 md:py-32 bg-background" ref={containerRef}>
@@ -89,13 +90,13 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
         <div className="relative">
           {/* Animated line that goes around cards */}
           <div className="absolute left-0 right-0 top-0 bottom-0 hidden lg:block pointer-events-none" style={{ zIndex: 5 }}>
+            {/* Background SVG (gray line - always visible) */}
             <svg
               className="absolute w-full h-full"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
               fill="none"
             >
-              {/* Background path (gray) */}
               <path
                 d={snakePath}
                 stroke="#e5e7eb"
@@ -103,20 +104,30 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
                 fill="none"
                 vectorEffect="non-scaling-stroke"
               />
-              {/* Animated path (blue) */}
-              <motion.path
-                d={snakePath}
-                stroke="#6366f1"
-                strokeWidth="0.8"
-                fill="none"
-                vectorEffect="non-scaling-stroke"
-                strokeDasharray="1"
-                style={{
-                  strokeDashoffset,
-                }}
-                pathLength="1"
-              />
             </svg>
+
+            {/* Blue line SVG with clip mask - reveals from top as you scroll */}
+            <motion.div
+              className="absolute w-full h-full"
+              style={{
+                clipPath: useTransform(clipProgress, (v) => `inset(0 0 ${100 - v}% 0)`),
+              }}
+            >
+              <svg
+                className="absolute w-full h-full"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                fill="none"
+              >
+                <path
+                  d={snakePath}
+                  stroke="#6366f1"
+                  strokeWidth="0.8"
+                  fill="none"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg>
+            </motion.div>
           </div>
 
           {/* Event cards */}
