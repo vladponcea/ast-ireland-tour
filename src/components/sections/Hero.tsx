@@ -84,16 +84,6 @@ export function Hero({ onOpenModal }: HeroProps) {
             The Irish Roadshow
           </motion.h1>
 
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl sm:text-2xl text-accent font-medium mb-6"
-          >
-            12 Months &bull; 12 Events &bull; 12 Counties
-          </motion.p>
-
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -112,7 +102,7 @@ export function Hero({ onOpenModal }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-wrap gap-4 mb-12"
+            className="flex flex-wrap gap-4 mb-8"
           >
             <Button variant="outline" size="lg" href="#roadmap" className="border-white/50 text-white hover:border-white hover:text-white">
               View the Roadmap
@@ -122,26 +112,15 @@ export function Hero({ onOpenModal }: HeroProps) {
             </Button>
           </motion.div>
 
-          {/* Stats Row */}
-          <motion.div
+          {/* Subheading */}
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="flex flex-wrap gap-8 text-sm uppercase tracking-widest"
+            className="text-xl sm:text-2xl text-accent font-medium"
           >
-            <div>
-              <span className="text-text-secondary">Year:</span>{" "}
-              <span className="text-text-primary font-semibold">2026</span>
-            </div>
-            <div>
-              <span className="text-text-secondary">Destinations:</span>{" "}
-              <span className="text-text-primary font-semibold">12 Counties</span>
-            </div>
-            <div>
-              <span className="text-text-secondary">Format:</span>{" "}
-              <span className="text-text-primary font-semibold">In-Person</span>
-            </div>
-          </motion.div>
+            12 Months &bull; 12 Events &bull; 12 Counties
+          </motion.p>
         </div>
 
         {/* Cycling City Name - Bottom Right */}
