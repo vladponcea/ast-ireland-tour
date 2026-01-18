@@ -34,7 +34,7 @@ export function Hero({ onOpenModal }: HeroProps) {
   const bgPositions: Record<string, string> = {
     dublin: "center 30%",
     cavan: "center 40%",
-    wexford: "center 40%",
+    wexford: "center 60%",
     clare: "center 30%",
     kerry: "center 40%",
   };
