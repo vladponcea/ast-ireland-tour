@@ -284,6 +284,7 @@ export function OptInForm({
               id="phone"
               name="phone"
               placeholder="Phone Number"
+              required
               value={formData.phone}
               onChange={handleChange}
               className="flex-1 px-4 py-3 bg-background text-text-primary placeholder:text-text-secondary/50 focus:outline-none min-w-0"
