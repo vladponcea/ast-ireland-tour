@@ -1,13 +1,114 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { FadeInUp } from "../animations";
 import { EventCard } from "../ui/EventCard";
 import { events, Event } from "@/lib/events";
 
 interface RoadmapProps {
   onEventSelect: (event: Event) => void;
+}
+
+// Checkpoint positions for 12 events (percentage-based y positions)
+const checkpoints = [
+  { x: 5, y: 4.5 },    // Event 1 - left
+  { x: 95, y: 12.5 },  // Event 2 - right
+  { x: 5, y: 20.5 },   // Event 3 - left
+  { x: 95, y: 28.5 },  // Event 4 - right
+  { x: 5, y: 36.5 },   // Event 5 - left
+  { x: 95, y: 44.5 },  // Event 6 - right
+  { x: 5, y: 52.5 },   // Event 7 - left
+  { x: 95, y: 60.5 },  // Event 8 - right
+  { x: 5, y: 68.5 },   // Event 9 - left
+  { x: 95, y: 76.5 },  // Event 10 - right
+  { x: 5, y: 84.5 },   // Event 11 - left
+  { x: 95, y: 92.5 },  // Event 12 - right
+];
+
+// The snake path for 12 events
+const snakePath = `
+  M 50 0
+  L 50 2
+  L 5 2
+  L 5 7
+  L 50 7
+  L 50 10
+  L 95 10
+  L 95 15
+  L 50 15
+  L 50 18
+  L 5 18
+  L 5 23
+  L 50 23
+  L 50 26
+  L 95 26
+  L 95 31
+  L 50 31
+  L 50 34
+  L 5 34
+  L 5 39
+  L 50 39
+  L 50 42
+  L 95 42
+  L 95 47
+  L 50 47
+  L 50 50
+  L 5 50
+  L 5 55
+  L 50 55
+  L 50 58
+  L 95 58
+  L 95 63
+  L 50 63
+  L 50 66
+  L 5 66
+  L 5 71
+  L 50 71
+  L 50 74
+  L 95 74
+  L 95 79
+  L 50 79
+  L 50 82
+  L 5 82
+  L 5 87
+  L 50 87
+  L 50 90
+  L 95 90
+  L 95 95
+  L 50 95
+  L 50 100
+`;
+
+// Checkpoint dot component to properly use hooks
+function CheckpointDot({
+  x,
+  y,
+  index,
+  scrollYProgress
+}: {
+  x: number;
+  y: number;
+  index: number;
+  scrollYProgress: MotionValue<number>;
+}) {
+  const threshold = (index + 1) / checkpoints.length;
+  const fill = useTransform(
+    scrollYProgress,
+    [threshold - 0.08, threshold],
+    ["#e5e7eb", "#6366f1"]
+  );
+
+  return (
+    <motion.circle
+      cx={x}
+      cy={y}
+      r="1"
+      stroke="#e5e7eb"
+      strokeWidth="0.2"
+      style={{ fill }}
+    />
+  );
 }
 
 export function Roadmap({ onEventSelect }: RoadmapProps) {
@@ -18,34 +119,6 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
   });
 
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-  // Generate a snake path that goes left and right around cards
-  const generateSnakePath = () => {
-    const cardCount = events.length;
-    const cardHeight = 400; // approximate height per card section
-    const totalHeight = cardCount * cardHeight;
-    const width = 1200;
-    const padding = 100;
-
-    let path = `M ${width / 2} 0`;
-
-    for (let i = 0; i < cardCount; i++) {
-      const y = i * cardHeight + cardHeight / 2;
-      const isEven = i % 2 === 0;
-      const curveX = isEven ? padding : width - padding;
-      const controlOffset = cardHeight / 3;
-
-      // Curve to the side
-      path += ` Q ${curveX} ${y - controlOffset}, ${curveX} ${y}`;
-      // Curve back to center for next card
-      if (i < cardCount - 1) {
-        const nextY = (i + 1) * cardHeight + cardHeight / 2;
-        path += ` Q ${curveX} ${y + controlOffset}, ${width / 2} ${y + cardHeight / 2}`;
-      }
-    }
-
-    return path;
-  };
 
   return (
     <section id="roadmap" className="py-24 md:py-32 bg-background" ref={containerRef}>
@@ -69,48 +142,9 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               preserveAspectRatio="none"
               fill="none"
             >
-              {/*
-                Path goes: down center, then alternates left/right around each card
-                Using 90-degree corners (L commands for straight lines)
-              */}
               {/* Background path (gray) */}
               <path
-                d={`
-                  M 50 0
-                  L 50 4
-                  L 5 4
-                  L 5 12
-                  L 50 12
-                  L 50 16
-                  L 95 16
-                  L 95 24
-                  L 50 24
-                  L 50 28
-                  L 5 28
-                  L 5 36
-                  L 50 36
-                  L 50 40
-                  L 95 40
-                  L 95 48
-                  L 50 48
-                  L 50 52
-                  L 5 52
-                  L 5 60
-                  L 50 60
-                  L 50 64
-                  L 95 64
-                  L 95 72
-                  L 50 72
-                  L 50 76
-                  L 5 76
-                  L 5 84
-                  L 50 84
-                  L 50 88
-                  L 95 88
-                  L 95 96
-                  L 50 96
-                  L 50 100
-                `}
+                d={snakePath}
                 stroke="#e5e7eb"
                 strokeWidth="0.3"
                 fill="none"
@@ -118,50 +152,25 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               />
               {/* Animated path (blue) */}
               <motion.path
-                d={`
-                  M 50 0
-                  L 50 4
-                  L 5 4
-                  L 5 12
-                  L 50 12
-                  L 50 16
-                  L 95 16
-                  L 95 24
-                  L 50 24
-                  L 50 28
-                  L 5 28
-                  L 5 36
-                  L 50 36
-                  L 50 40
-                  L 95 40
-                  L 95 48
-                  L 50 48
-                  L 50 52
-                  L 5 52
-                  L 5 60
-                  L 50 60
-                  L 50 64
-                  L 95 64
-                  L 95 72
-                  L 50 72
-                  L 50 76
-                  L 5 76
-                  L 5 84
-                  L 50 84
-                  L 50 88
-                  L 95 88
-                  L 95 96
-                  L 50 96
-                  L 50 100
-                `}
+                d={snakePath}
                 stroke="#6366f1"
-                strokeWidth="0.3"
+                strokeWidth="0.4"
                 fill="none"
                 vectorEffect="non-scaling-stroke"
                 style={{
                   pathLength,
                 }}
               />
+              {/* Checkpoint dots */}
+              {checkpoints.map((checkpoint, index) => (
+                <CheckpointDot
+                  key={index}
+                  x={checkpoint.x}
+                  y={checkpoint.y}
+                  index={index}
+                  scrollYProgress={scrollYProgress}
+                />
+              ))}
             </svg>
           </div>
 
