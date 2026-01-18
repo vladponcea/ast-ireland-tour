@@ -72,8 +72,8 @@ export default function Home() {
 
       <main>
         <Hero onOpenModal={() => handleOpenModal()} />
-        <PhotoCarousel />
         <ValueProp />
+        <PhotoCarousel />
         <Roadmap onEventSelect={handleOpenModal} />
         <FAQ />
       </main>
