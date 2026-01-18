@@ -32,7 +32,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? "glass border-b border-text-secondary/10" : ""
+          isScrolled ? "bg-background border-b border-text-secondary/10" : "bg-background"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
