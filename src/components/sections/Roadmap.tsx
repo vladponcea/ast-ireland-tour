@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeInUp } from "../animations";
 import { EventCard } from "../ui/EventCard";
 import { events, Event } from "@/lib/events";
@@ -9,22 +9,6 @@ import { events, Event } from "@/lib/events";
 interface RoadmapProps {
   onEventSelect: (event: Event) => void;
 }
-
-// Checkpoint positions for 12 events (percentage-based y positions)
-const checkpoints = [
-  { x: 5, y: 4.5 },    // Event 1 - left
-  { x: 95, y: 12.5 },  // Event 2 - right
-  { x: 5, y: 20.5 },   // Event 3 - left
-  { x: 95, y: 28.5 },  // Event 4 - right
-  { x: 5, y: 36.5 },   // Event 5 - left
-  { x: 95, y: 44.5 },  // Event 6 - right
-  { x: 5, y: 52.5 },   // Event 7 - left
-  { x: 95, y: 60.5 },  // Event 8 - right
-  { x: 5, y: 68.5 },   // Event 9 - left
-  { x: 95, y: 76.5 },  // Event 10 - right
-  { x: 5, y: 84.5 },   // Event 11 - left
-  { x: 95, y: 92.5 },  // Event 12 - right
-];
 
 // The snake path for 12 events
 const snakePath = `
@@ -80,37 +64,6 @@ const snakePath = `
   L 50 100
 `;
 
-// Checkpoint dot component to properly use hooks
-function CheckpointDot({
-  x,
-  y,
-  index,
-  scrollYProgress
-}: {
-  x: number;
-  y: number;
-  index: number;
-  scrollYProgress: MotionValue<number>;
-}) {
-  const threshold = (index + 1) / checkpoints.length;
-  const fill = useTransform(
-    scrollYProgress,
-    [threshold - 0.08, threshold],
-    ["#e5e7eb", "#6366f1"]
-  );
-
-  return (
-    <motion.circle
-      cx={x}
-      cy={y}
-      r="1"
-      stroke="#e5e7eb"
-      strokeWidth="0.2"
-      style={{ fill }}
-    />
-  );
-}
-
 export function Roadmap({ onEventSelect }: RoadmapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -146,7 +99,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               <path
                 d={snakePath}
                 stroke="#e5e7eb"
-                strokeWidth="0.3"
+                strokeWidth="0.5"
                 fill="none"
                 vectorEffect="non-scaling-stroke"
               />
@@ -154,23 +107,13 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               <motion.path
                 d={snakePath}
                 stroke="#6366f1"
-                strokeWidth="0.4"
+                strokeWidth="0.8"
                 fill="none"
                 vectorEffect="non-scaling-stroke"
                 style={{
                   pathLength,
                 }}
               />
-              {/* Checkpoint dots */}
-              {checkpoints.map((checkpoint, index) => (
-                <CheckpointDot
-                  key={index}
-                  x={checkpoint.x}
-                  y={checkpoint.y}
-                  index={index}
-                  scrollYProgress={scrollYProgress}
-                />
-              ))}
             </svg>
           </div>
 
