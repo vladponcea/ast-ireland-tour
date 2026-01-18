@@ -50,7 +50,9 @@ export function Hero({ onOpenModal }: HeroProps) {
               }}
             />
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/30" />
+            {/* Bottom Gradient for text visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           </motion.div>
 
           {/* Content overlaid on image */}
