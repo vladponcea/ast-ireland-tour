@@ -47,6 +47,17 @@ export function Navbar({ onOpenModal }: NavbarProps) {
               Affinity Sales Training
             </a>
 
+            {/* Center Title - only shows when scrolled */}
+            <div
+              className={`absolute left-1/2 -translate-x-1/2 transition-all duration-300 hidden md:block ${
+                isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+            >
+              <span className="font-display text-lg italic text-text-primary">
+                The Irish Roadshow
+              </span>
+            </div>
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
