@@ -35,7 +35,7 @@ export const events: Event[] = [
     host: "Casey",
     description:
       "Begin the journey in Ireland's lakeland region. Where determination meets opportunity in an intimate setting designed for transformation.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/cNi7sK4LqgDk6lM2xPeEo0B",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Roadshow - Cavan",
