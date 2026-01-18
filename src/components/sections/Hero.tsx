@@ -80,16 +80,6 @@ export function Hero({ onOpenModal }: HeroProps) {
                   The Irish Roadshow
                 </motion.h1>
 
-                {/* Stats line */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  className="text-sm text-white/70 font-medium mb-6"
-                >
-                  12 Months &bull; 12 Events &bull; 12 Counties
-                </motion.p>
-
                 {/* Description */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -113,7 +103,7 @@ export function Hero({ onOpenModal }: HeroProps) {
                     Secure Your Seat
                   </Button>
                   <span className="text-sm text-white/70">
-                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person
+                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp;&nbsp;&nbsp; 12 Months &bull; 12 Events &bull; 12 Counties &nbsp;&nbsp;&nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person
                   </span>
                 </motion.div>
               </div>
