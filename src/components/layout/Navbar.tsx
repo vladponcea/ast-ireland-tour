@@ -40,7 +40,9 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             {/* Logo */}
             <a
               href="#"
-              className="text-sm font-bold tracking-[0.2em] uppercase text-text-primary hover:text-accent transition-colors"
+              className={`text-sm font-bold tracking-[0.2em] uppercase transition-colors ${
+                isScrolled ? "text-text-primary hover:text-accent" : "text-white hover:text-white/80"
+              }`}
             >
               Affinity Sales Training
             </a>
@@ -51,12 +53,19 @@ export function Navbar({ onOpenModal }: NavbarProps) {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium tracking-wider uppercase text-text-secondary hover:text-text-primary transition-colors"
+                  className={`text-sm font-medium tracking-wider uppercase transition-colors ${
+                    isScrolled ? "text-text-secondary hover:text-text-primary" : "text-white/80 hover:text-white"
+                  }`}
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="outline" size="sm" onClick={onOpenModal}>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={onOpenModal}
+                className={isScrolled ? "" : "border-white/50 text-white hover:border-white hover:text-white"}
+              >
                 Secure your seat
               </Button>
             </div>
@@ -64,7 +73,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-text-primary"
+              className={`md:hidden p-2 ${isScrolled ? "text-text-primary" : "text-white"}`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
