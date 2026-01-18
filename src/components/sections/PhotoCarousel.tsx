@@ -18,7 +18,12 @@ const bottomRowImages = [
 
 export function PhotoCarousel() {
   return (
-    <section className="py-8 bg-background overflow-hidden">
+    <section className="py-16 bg-background overflow-hidden">
+      {/* Title */}
+      <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-text-primary text-center mb-12">
+        Our Previous Events
+      </h2>
+
       <div className="space-y-4">
         {/* Top Row - scrolls left */}
         <div className="relative">
