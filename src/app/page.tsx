@@ -67,10 +67,10 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <Navbar onOpenModal={() => handleOpenModal()} />
 
-      <main>
+      <main className="overflow-x-hidden">
         <Hero onOpenModal={() => handleOpenModal()} />
         <ValueProp />
         <PhotoCarousel />
@@ -91,6 +91,6 @@ export default function Home() {
           preSelectedEventId={selectedEvent?.id}
         />
       </Modal>
-    </>
+    </div>
   );
 }
