@@ -272,7 +272,7 @@ export function OptInForm({
             <select
               value={selectedCountry.country}
               onChange={handleCountryChange}
-              className="w-full sm:w-28 px-2 py-3 bg-background text-text-primary focus:outline-none text-sm border-b sm:border-b-0 sm:border-r border-text-secondary/30"
+              className="w-full sm:w-28 px-2 py-3 bg-background text-text-primary focus:outline-none text-sm"
             >
               {countryCodes.map((country) => (
                 <option key={`${country.country}-${country.code}`} value={country.country}>
