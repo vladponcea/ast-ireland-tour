@@ -68,8 +68,8 @@ function ThankYouContent() {
           className="text-text-secondary text-lg mb-8"
         >
           {isWaitlist
-            ? `You've joined the waitlist for AST ${event.city}. We'll notify you when tickets become available.`
-            : `Your seat at AST ${event.city} is confirmed.`}
+            ? `You've joined the waitlist for Roadshow in ${event.city}. We'll notify you when tickets become available.`
+            : `Your seat at Roadshow in ${event.city} is confirmed.`}
         </motion.p>
 
         {/* Divider */}
@@ -173,7 +173,7 @@ function ThankYouContent() {
             )}
             <li className="flex items-start gap-3 text-text-secondary">
               <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-              <span>Prepare to transform your sales game</span>
+              <span>Our team will call you when tickets go live</span>
             </li>
           </ul>
         </motion.div>
