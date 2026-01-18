@@ -30,8 +30,32 @@ export default function Home() {
     formData: { firstName: string; lastName: string; email: string; phone: string },
     event: Event
   ) => {
-    // Handle form submission
-    console.log("Form submitted:", { formData, event });
+    // Send data to Make.com webhook
+    try {
+      await fetch("https://hook.eu2.make.com/ato6ffjqvqxk5bni5ly2qhy7ch1cpn8z", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          event: {
+            id: event.id,
+            city: event.city,
+            county: event.county,
+            date: event.date,
+            month: event.month,
+            status: event.status,
+          },
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+    } catch (error) {
+      console.error("Webhook error:", error);
+    }
 
     if (event.status === "TICKETS_LIVE" && event.stripeLink) {
       // Redirect to Stripe
