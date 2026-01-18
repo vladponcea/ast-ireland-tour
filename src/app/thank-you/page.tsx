@@ -159,22 +159,27 @@ function ThankYouContent() {
               <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
               <span>Check your email for confirmation</span>
             </li>
-            {!isWaitlist && (
+            {isWaitlist ? (
+              <li className="flex items-start gap-3 text-text-secondary">
+                <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                <span>Our team will call you when tickets go live</span>
+              </li>
+            ) : (
               <>
                 <li className="flex items-start gap-3 text-text-secondary">
                   <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                  <span>Join the WhatsApp group</span>
+                  <span>Join the WhatsApp group to connect with attendees</span>
                 </li>
                 <li className="flex items-start gap-3 text-text-secondary">
                   <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                  <span>Mark your calendar</span>
+                  <span>Add the event to your calendar</span>
+                </li>
+                <li className="flex items-start gap-3 text-text-secondary">
+                  <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                  <span>Get ready to transform your sales game</span>
                 </li>
               </>
             )}
-            <li className="flex items-start gap-3 text-text-secondary">
-              <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-              <span>Our team will call you when tickets go live</span>
-            </li>
           </ul>
         </motion.div>
 
