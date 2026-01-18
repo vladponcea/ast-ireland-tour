@@ -93,7 +93,7 @@ export function Hero({ onOpenModal }: HeroProps) {
           >
             With one mission: to bring Ireland's sales and entrepreneurial community
             together through practical workshops, meaningful networking, and real-world
-            learning — across 12 counties, 12 months, and 12 live events.
+            learning.
           </motion.p>
 
           {/* CTA Button */}
