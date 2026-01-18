@@ -93,8 +93,7 @@ export function Hero({ onOpenModal }: HeroProps) {
           >
             With one mission: to create a transformational sales training experience
             never seen before in Ireland. A monthly event across 12 counties redefining
-            networking through Workshops, Masterminds, Live Training, and our signature
-            Closing Dinner.
+            networking through Workshops, Masterminds, and Live Training.
           </motion.p>
 
           {/* CTA Button */}

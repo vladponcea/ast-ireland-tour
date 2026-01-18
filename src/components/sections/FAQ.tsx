@@ -13,17 +13,7 @@ const faqItems = [
   {
     question: "What's the schedule like?",
     answer:
-      "Each event runs for a full day, typically from 9am to 6pm, followed by our signature Closing Dinner. The day includes interactive workshops, mastermind sessions, live training demonstrations, and structured networking opportunities. Every moment is designed for maximum impact.",
-  },
-  {
-    question: "What pricing options are available?",
-    answer:
-      "We offer individual event tickets for each city, as well as our Irish Roadshow Passport which gives you access to any 3 events of your choice at a significant discount. Early bird pricing is available for select events. Contact us for group rates.",
-  },
-  {
-    question: "What's the actual ROI of attending?",
-    answer:
-      "Past attendees report making connections worth thousands in new business within weeks of attending. But beyond immediate revenue, you'll gain frameworks, strategies, and a network that will compound in value over your entire career. The skills you learn are applicable immediately.",
+      "Each event runs for a full day, typically from 9am to 6pm. The day includes interactive workshops, mastermind sessions, live training demonstrations, and structured networking opportunities. Every moment is designed for maximum impact.",
   },
   {
     question: "How is this different from other sales training?",
@@ -34,11 +24,6 @@ const faqItems = [
     question: "Why attend in-person when I can learn online?",
     answer:
       "There's no substitute for in-person energy, connection, and accountability. Online learning is convenient but easily forgotten. When you invest your time and presence, you commit at a different level. The relationships built in-person lead to partnerships, referrals, and friendships that last.",
-  },
-  {
-    question: "What is the Irish Roadshow Passport?",
-    answer:
-      "The Passport is our premium offering for committed professionals. It grants you VIP access to any 3 events of your choice, priority seating at all sessions, access to our exclusive Passport-holder community, and first access to sold-out events. It's the best value for anyone serious about transformation.",
   },
   {
     question: "How do I know if I'll fit in with other attendees?",

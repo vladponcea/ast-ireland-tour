@@ -8,7 +8,7 @@ const galleryImages = [
   { id: 1, src: "/images/gallery/event-1.jpg", alt: "Networking moment", size: "tall" },
   { id: 2, src: "/images/gallery/event-2.jpg", alt: "Training session", size: "wide" },
   { id: 3, src: "/images/gallery/event-3.jpg", alt: "Group photo", size: "square" },
-  { id: 4, src: "/images/gallery/event-4.jpg", alt: "Closing dinner", size: "square" },
+  { id: 4, src: "/images/gallery/event-4.jpg", alt: "Networking event", size: "square" },
   { id: 5, src: "/images/gallery/event-5.jpg", alt: "Mastermind session", size: "wide" },
   { id: 6, src: "/images/gallery/event-6.jpg", alt: "Candid moment", size: "tall" },
   { id: 7, src: "/images/gallery/event-7.jpg", alt: "Workshop activity", size: "square" },
