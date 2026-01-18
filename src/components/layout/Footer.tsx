@@ -38,15 +38,18 @@ export function Footer() {
             {/* Right Column */}
             <div className="md:text-right">
               <motion.a
-                href="mailto:hello@affinitysalestraining.ie"
+                href="https://www.instagram.com/affinitysalestraining/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-accent hover:text-text-primary transition-colors group mb-4"
                 whileHover={{ x: 5 }}
               >
+                <Instagram className="w-5 h-5" />
                 <span className="font-medium">Get in Touch</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </motion.a>
               <p className="text-text-secondary text-sm">
-                Questions about events, partnerships, or the Passport?
+                Have questions? Send us a message on Instagram.
                 <br />
                 We&apos;d love to hear from you.
               </p>

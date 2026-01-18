@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Instagram } from "lucide-react";
 import { FadeInUp } from "../animations";
 import { Accordion } from "../ui/Accordion";
 
@@ -45,13 +45,16 @@ export function FAQ() {
                   FAQs
                 </h2>
                 <p className="text-text-secondary mb-8">
-                  Still have questions? We&apos;re here to help.
+                  Still have questions? Message us on Instagram.
                 </p>
                 <a
-                  href="mailto:hello@affinitysalestraining.ie"
+                  href="https://www.instagram.com/affinitysalestraining/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-accent hover:text-text-primary transition-colors group"
                 >
-                  <span className="font-medium">Contact us</span>
+                  <Instagram className="w-5 h-5" />
+                  <span className="font-medium">Message us</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
