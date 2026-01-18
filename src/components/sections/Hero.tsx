@@ -30,6 +30,19 @@ export function Hero({ onOpenModal }: HeroProps) {
 
   const currentEvent = events[currentCityIndex];
 
+  // Custom background positions for specific cities
+  const bgPositions: Record<string, string> = {
+    dublin: "center 30%",
+    cavan: "center 40%",
+    wexford: "center 40%",
+    clare: "center 30%",
+    kerry: "center 40%",
+  };
+
+  const getBgPosition = (city: string) => {
+    return bgPositions[city.toLowerCase()] || "center";
+  };
+
   return (
     <section
       ref={containerRef}
@@ -50,9 +63,10 @@ export function Hero({ onOpenModal }: HeroProps) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+                className="absolute inset-0 bg-cover bg-no-repeat scale-105"
                 style={{
                   backgroundImage: `url('${currentEvent.image}')`,
+                  backgroundPosition: getBgPosition(currentEvent.city),
                 }}
               />
             </AnimatePresence>
