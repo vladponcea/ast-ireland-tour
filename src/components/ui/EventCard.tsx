@@ -80,19 +80,10 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
             className={`inline-flex items-center gap-2 text-accent hover:text-text-primary transition-colors group mt-4 ${
               isLeft ? "" : "lg:ml-auto"
             }`}
-            whileHover={{ x: isLeft ? 5 : -5 }}
+            whileHover={{ x: 5 }}
           >
-            {isLeft ? (
-              <>
-                <span className="font-medium">{ctaText}</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </>
-            ) : (
-              <>
-                <ArrowRight className="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1" />
-                <span className="font-medium">{ctaText}</span>
-              </>
-            )}
+            <span className="font-medium">{ctaText}</span>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </motion.button>
         </div>
       </div>
