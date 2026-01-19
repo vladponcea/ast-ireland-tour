@@ -112,7 +112,7 @@ export function Hero({ onOpenModal }: HeroProps) {
                     Secure Your Seat
                   </Button>
                   <p className="text-[8px] sm:text-xs md:text-sm text-white/70 whitespace-nowrap">
-                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person &nbsp;&nbsp; <span className="text-white font-medium">DESTINATIONS:</span> 12 Counties
+                    <span className="text-white font-medium">YEAR:</span> 2026 &nbsp;&nbsp; <span className="text-white font-medium">FORMAT:</span> In-Person &nbsp;&nbsp; <span className="text-white font-medium">STOPS:</span> 12 Counties Across Ireland
                   </p>
                 </motion.div>
               </div>
