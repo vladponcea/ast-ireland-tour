@@ -69,7 +69,7 @@ function ThankYouContent() {
         >
           {isWaitlist
             ? `You've joined the waitlist for Roadshow in ${event.city}. We'll notify you when tickets become available.`
-            : `Your seat at Roadshow in ${event.city} is confirmed.`}
+            : `Your seat at The Irish Entrepreneur Roadshow in ${event.city} is confirmed.`}
         </motion.p>
 
         {/* Divider */}
