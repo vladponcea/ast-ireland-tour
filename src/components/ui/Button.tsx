@@ -16,7 +16,7 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-[#1c64ff] to-[#0a0a0a] text-white hover:opacity-90 border-0",
+    "bg-gradient-to-r from-[#169B62] via-[#FFFFFF] to-[#FF883E] text-black font-semibold hover:opacity-90 border-0",
   secondary:
     "bg-background-secondary text-text-primary hover:bg-background-secondary/80 border-transparent",
   outline:
