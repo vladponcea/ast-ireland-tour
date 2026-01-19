@@ -104,7 +104,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
               >
                 <path
                   d={snakePath}
-                  stroke="#169B62"
+                  stroke="#6366f1"
                   strokeWidth="0.8"
                   fill="none"
                   vectorEffect="non-scaling-stroke"

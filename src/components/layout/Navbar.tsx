@@ -40,7 +40,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             {/* Logo */}
             <a
               href="#"
-              className="text-sm font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-[#169B62] to-[#C9A227] bg-clip-text text-transparent"
+              className="text-sm font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-[#1c64ff] to-[#1e3a8a] bg-clip-text text-transparent"
             >
               Affinity Sales Training
             </a>
