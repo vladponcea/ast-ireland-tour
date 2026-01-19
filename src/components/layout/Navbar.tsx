@@ -40,9 +40,11 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             {/* Logo */}
             <a
               href="#"
-              className="text-sm font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-[#1c64ff] to-[#1e3a8a] bg-clip-text text-transparent"
+              className="text-sm font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-[#1c64ff] to-[#1e3a8a] bg-clip-text text-transparent flex items-center gap-2"
             >
+              <span className="text-lg">☘️</span>
               Affinity Sales Training
+              <span className="text-lg">☘️</span>
             </a>
 
             {/* Center Title - only shows when scrolled */}
