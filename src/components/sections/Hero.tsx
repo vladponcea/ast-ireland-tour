@@ -46,7 +46,7 @@ export function Hero({ onOpenModal }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="bg-background pt-24 md:pt-28"
+      className="bg-white pt-24 md:pt-28"
     >
       {/* Image Container with rounded corners */}
       <div className="px-4 sm:px-6 lg:px-8">
