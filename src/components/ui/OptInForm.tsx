@@ -164,10 +164,19 @@ export function OptInForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedEvent) {
-      // Combine country code with phone number
+      // Clean phone number - remove any existing country code to avoid duplication
+      let cleanPhone = formData.phone.trim();
+      // If phone starts with +, assume user entered full number with country code
+      if (cleanPhone.startsWith('+')) {
+        // Use the phone as-is since it already has a country code
+      } else {
+        // Remove leading zeros and combine with selected country code
+        cleanPhone = cleanPhone.replace(/^0+/, '');
+        cleanPhone = `${selectedCountry.code}${cleanPhone}`;
+      }
       const fullFormData = {
         ...formData,
-        phone: `${selectedCountry.code} ${formData.phone}`,
+        phone: cleanPhone,
       };
       onSubmit(fullFormData, selectedEvent);
     }
