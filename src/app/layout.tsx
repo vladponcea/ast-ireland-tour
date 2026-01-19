@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AST Irish Entrepreneur Roadshow 2026",
     description:
-      "12 Months • 12 Events • 12 Counties - A transformational sales training experience never seen before in Ireland.",
+      "12 Months • 12 Events • 12 Counties",
     type: "website",
     locale: "en_IE",
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AST Irish Entrepreneur Roadshow 2026",
     description:
-      "12 Months • 12 Events • 12 Counties - Transform your sales game across Ireland.",
+      "12 Months • 12 Events • 12 Counties",
   },
 };
 
