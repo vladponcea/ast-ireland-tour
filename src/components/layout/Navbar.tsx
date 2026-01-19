@@ -54,7 +54,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
               }`}
             >
               <span className="font-display text-2xl lg:text-3xl italic text-text-primary">
-                The Irish Roadshow
+                The Irish Entrepreneur Roadshow
               </span>
             </div>
 

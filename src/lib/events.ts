@@ -38,7 +38,7 @@ export const events: Event[] = [
     stripeLink: "https://buy.stripe.com/cNi7sK4LqgDk6lM2xPeEo0B",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Cavan",
+      title: "AST Irish Entrepreneur Roadshow - Cavan",
       location: "Cavan",
       startTime: "2026-01-31T09:00:00",
       endTime: "2026-01-31T18:00:00",
@@ -59,7 +59,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Limerick",
+      title: "AST Irish Entrepreneur Roadshow - Limerick",
       location: "Limerick",
       startTime: "2026-02-28T09:00:00",
       endTime: "2026-02-28T18:00:00",
@@ -80,7 +80,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Cork",
+      title: "AST Irish Entrepreneur Roadshow - Cork",
       location: "Cork",
       startTime: "2026-03-31T09:00:00",
       endTime: "2026-03-31T18:00:00",
@@ -101,7 +101,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Belfast",
+      title: "AST Irish Entrepreneur Roadshow - Belfast",
       location: "Belfast",
       startTime: "2026-04-25T09:00:00",
       endTime: "2026-04-25T18:00:00",
@@ -122,7 +122,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Meath",
+      title: "AST Irish Entrepreneur Roadshow - Meath",
       location: "Meath",
       startTime: "2026-05-30T09:00:00",
       endTime: "2026-05-30T18:00:00",
@@ -143,7 +143,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Wexford",
+      title: "AST Irish Entrepreneur Roadshow - Wexford",
       location: "Wexford",
       startTime: "2026-06-27T09:00:00",
       endTime: "2026-06-27T18:00:00",
@@ -164,7 +164,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Galway",
+      title: "AST Irish Entrepreneur Roadshow - Galway",
       location: "Galway",
       startTime: "2026-07-25T09:00:00",
       endTime: "2026-07-25T18:00:00",
@@ -185,7 +185,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Waterford",
+      title: "AST Irish Entrepreneur Roadshow - Waterford",
       location: "Waterford",
       startTime: "2026-08-29T09:00:00",
       endTime: "2026-08-29T18:00:00",
@@ -206,7 +206,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Clare",
+      title: "AST Irish Entrepreneur Roadshow - Clare",
       location: "Clare",
       startTime: "2026-09-26T09:00:00",
       endTime: "2026-09-26T18:00:00",
@@ -227,7 +227,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Sligo",
+      title: "AST Irish Entrepreneur Roadshow - Sligo",
       location: "Sligo",
       startTime: "2026-10-24T09:00:00",
       endTime: "2026-10-24T18:00:00",
@@ -248,7 +248,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Kerry",
+      title: "AST Irish Entrepreneur Roadshow - Kerry",
       location: "Kerry",
       startTime: "2026-11-28T09:00:00",
       endTime: "2026-11-28T18:00:00",
@@ -269,7 +269,7 @@ export const events: Event[] = [
     stripeLink: "",
     whatsappLink: "",
     calendarDetails: {
-      title: "AST Irish Roadshow - Dublin",
+      title: "AST Irish Entrepreneur Roadshow - Dublin",
       location: "Dublin",
       startTime: "2026-12-31T09:00:00",
       endTime: "2026-12-31T18:00:00",

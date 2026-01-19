@@ -6,9 +6,9 @@ import { Accordion } from "../ui/Accordion";
 
 const faqItems = [
   {
-    question: "Who should attend the AST Irish Roadshow?",
+    question: "Who should attend the AST Irish Entrepreneur Roadshow?",
     answer:
-      "The AST Irish Roadshow is designed for ambitious sales professionals, business owners, entrepreneurs, and anyone looking to elevate their sales skills and expand their network. Whether you're just starting out or you're a seasoned professional, our events are structured to deliver value at every level.",
+      "The AST Irish Entrepreneur Roadshow is designed for ambitious sales professionals, business owners, entrepreneurs, and anyone looking to elevate their sales skills and expand their network. Whether you're just starting out or you're a seasoned professional, our events are structured to deliver value at every level.",
   },
   {
     question: "What's the schedule like?",
@@ -18,7 +18,7 @@ const faqItems = [
   {
     question: "How is this different from other sales training?",
     answer:
-      "Most sales training is passive—you sit, listen, and forget. The AST Irish Roadshow is immersive and action-oriented. You'll practice in real-time, get immediate feedback, and leave with strategies you can implement the next day. Plus, the connections you make are curated and valuable.",
+      "Most sales training is passive—you sit, listen, and forget. The AST Irish Entrepreneur Roadshow is immersive and action-oriented. You'll practice in real-time, get immediate feedback, and leave with strategies you can implement the next day. Plus, the connections you make are curated and valuable.",
   },
   {
     question: "Why attend in-person when I can learn online?",

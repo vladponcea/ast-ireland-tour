@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "AST Irish Roadshow 2026 | 12 Months • 12 Events • 12 Counties",
+  title: "AST Irish Entrepreneur Roadshow 2026 | 12 Months • 12 Events • 12 Counties",
   description:
-    "Affinity Sales Training presents The Irish Roadshow - a transformational sales training experience across 12 counties. Workshops, Masterminds, and Live Training.",
+    "Affinity Sales Training presents The Irish Entrepreneur Roadshow - a transformational sales training experience across 12 counties. Workshops, Masterminds, and Live Training.",
   keywords: [
     "sales training",
     "Ireland",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "professional development",
   ],
   openGraph: {
-    title: "AST Irish Roadshow 2026",
+    title: "AST Irish Entrepreneur Roadshow 2026",
     description:
       "12 Months • 12 Events • 12 Counties - A transformational sales training experience never seen before in Ireland.",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AST Irish Roadshow 2026",
+    title: "AST Irish Entrepreneur Roadshow 2026",
     description:
       "12 Months • 12 Events • 12 Counties - Transform your sales game across Ireland.",
   },

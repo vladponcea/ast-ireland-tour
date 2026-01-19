@@ -10,7 +10,7 @@ export function ValueProp() {
           {/* Heading */}
           <FadeInUp>
             <h2 className="font-display text-[1.7rem] sm:text-5xl md:text-6xl italic text-text-primary leading-tight text-center mb-12 whitespace-nowrap">
-              What is the Irish Roadshow?
+              What is the Irish Entrepreneur Roadshow?
             </h2>
           </FadeInUp>
 
@@ -18,7 +18,7 @@ export function ValueProp() {
           <FadeInUp delay={0.2}>
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed text-center">
               <p>
-                The Irish Roadshow is a 12 month, 12 county tour bringing salespeople and entrepreneurs together across Ireland.
+                The Irish Entrepreneur Roadshow is a 12 month, 12 county tour bringing salespeople and entrepreneurs together across Ireland.
               </p>
               <p>
                 In partnership with YIE (Young Irish Entrepreneurs), each event is a practical, in-person workshop built for real networking, real learning and real connections.

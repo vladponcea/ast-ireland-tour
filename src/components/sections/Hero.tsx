@@ -87,7 +87,7 @@ export function Hero({ onOpenModal }: HeroProps) {
                   transition={{ delay: 0.3, duration: 0.8 }}
                   className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic text-white mb-2"
                 >
-                  The Irish Roadshow
+                  The Irish Entrepreneur Roadshow
                 </motion.h1>
 
                 {/* Description */}
