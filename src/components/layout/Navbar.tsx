@@ -43,7 +43,7 @@ export function Navbar({ onOpenModal }: NavbarProps) {
               className="text-sm font-bold tracking-[0.2em] uppercase flex items-center gap-2"
             >
               <span className="text-lg">☘️</span>
-              <span className="bg-gradient-to-r from-[#169B62] via-[#FFFFFF] to-[#FF883E] bg-clip-text text-transparent">Affinity Sales Training</span>
+              <span className="bg-gradient-to-r from-[#169B62] via-[#999999] to-[#FF883E] bg-clip-text text-transparent">Affinity Sales Training</span>
               <span className="text-lg">☘️</span>
             </a>
 
