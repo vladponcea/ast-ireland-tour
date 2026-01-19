@@ -16,11 +16,11 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-[#1c64ff] to-[#0a0a0a] text-white hover:opacity-90 border-0",
+    "bg-gradient-to-r from-[#1c64ff] to-[#3b82f6] text-white hover:opacity-90 border-0",
   secondary:
-    "bg-background-secondary text-text-primary hover:bg-background-secondary/80 border-transparent",
+    "bg-background-secondary text-text-primary hover:bg-[#1a1a1a] border-transparent",
   outline:
-    "bg-transparent text-text-primary border-text-primary/30 hover:border-accent hover:text-accent",
+    "bg-transparent text-text-primary border-white/30 hover:border-accent hover:text-accent",
   ghost:
     "bg-transparent text-text-primary hover:text-accent border-transparent",
 };
