@@ -76,7 +76,7 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           {/* CTA */}
           <motion.button
             onClick={() => onSelect(event)}
-            className={`text-[#FF883E] hover:text-text-primary transition-colors mt-4 ${
+            className={`text-[#FF883E] hover:text-white hover:bg-[#FF883E] border-2 border-[#FF883E] px-6 py-2 rounded-full transition-all mt-4 ${
               isLeft ? "" : "lg:ml-auto lg:block"
             }`}
             whileHover={{ scale: 1.02 }}
