@@ -59,7 +59,7 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           </div>
 
           {/* Theme */}
-          <p className="text-xs text-accent uppercase tracking-[0.2em] font-semibold">
+          <p className="text-xs text-[#FF883E] uppercase tracking-[0.2em] font-semibold">
             {event.theme}
           </p>
 
@@ -76,7 +76,7 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           {/* CTA */}
           <motion.button
             onClick={() => onSelect(event)}
-            className={`text-accent hover:text-text-primary transition-colors mt-4 ${
+            className={`text-[#FF883E] hover:text-text-primary transition-colors mt-4 ${
               isLeft ? "" : "lg:ml-auto lg:block"
             }`}
             whileHover={{ scale: 1.02 }}

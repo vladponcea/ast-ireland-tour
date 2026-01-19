@@ -40,10 +40,10 @@ export function Navbar({ onOpenModal }: NavbarProps) {
             {/* Logo */}
             <a
               href="#"
-              className="text-sm font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-[#1c64ff] to-[#1e3a8a] bg-clip-text text-transparent flex items-center gap-2"
+              className="text-sm font-bold tracking-[0.2em] uppercase flex items-center gap-2"
             >
               <span className="text-lg">☘️</span>
-              Affinity Sales Training
+              <span className="bg-gradient-to-r from-[#169B62] via-[#FFFFFF] to-[#FF883E] bg-clip-text text-transparent">Affinity Sales Training</span>
               <span className="text-lg">☘️</span>
             </a>
 

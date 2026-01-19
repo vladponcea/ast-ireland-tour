@@ -8,9 +8,9 @@
   --color-accent-dark: #0a0a0a;
   --color-text-primary: #0a0a0a;
   --color-text-secondary: #6b7280;
-  --color-status-live: #1c64ff;
-  --color-status-waitlist: #F59E0B;
-  --color-status-coming: #9ca3af;
+  --color-status-live: #169B62;
+  --color-status-waitlist: #FF883E;
+  --color-status-coming: #FF883E;
 
   /* Fonts */
   --font-sans: var(--font-inter);
