@@ -52,11 +52,11 @@ export const events: Event[] = [
     city: "Limerick",
     county: "County Limerick",
     theme: "THE TREATY CITY",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "TBD",
     description:
       "The treaty city welcomes ambitious professionals. Connect with Munster's finest in a city known for its fighting spirit.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/7sYaEWcdS72KdOe5K1eEo0D",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Limerick",
@@ -73,11 +73,11 @@ export const events: Event[] = [
     city: "Cork",
     county: "County Cork",
     theme: "THE REBEL COUNTY",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "Tiann, Sean Coffey",
     description:
       "The rebel county rises. Experience world-class training in Ireland's second city, where innovation meets tradition.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/28E6oG7XC2Mu4dE2xPeEo0E",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Cork",
