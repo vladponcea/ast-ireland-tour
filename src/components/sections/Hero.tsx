@@ -95,11 +95,21 @@ export function Hero({ onOpenModal }: HeroProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
-                  className="text-white/90 text-base md:text-lg leading-relaxed mb-6 max-w-xl"
+                  className="text-white/90 text-base md:text-lg leading-relaxed mb-3 max-w-xl"
                 >
                   With one mission: to bring Ireland's sales and entrepreneurial community
                   together through practical workshops, meaningful networking and real-world
                   learning.
+                </motion.p>
+
+                {/* Young Irish Entrepreneurs tag */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.65, duration: 0.6 }}
+                  className="text-white/70 text-sm md:text-base uppercase tracking-wider mb-6"
+                >
+                  Young Irish Entrepreneurs
                 </motion.p>
 
                 {/* CTA Button and info */}
