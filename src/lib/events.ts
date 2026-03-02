@@ -1,4 +1,4 @@
-export type EventStatus = "TICKETS_LIVE" | "WAITLIST_OPEN" | "COMING_SOON";
+export type EventStatus = "TICKETS_LIVE" | "WAITLIST_OPEN" | "COMING_SOON" | "COMPLETED";
 
 export interface CalendarDetails {
   title: string;
@@ -31,7 +31,7 @@ export const events: Event[] = [
     city: "Cavan",
     county: "County Cavan",
     theme: "THE LAKELAND CHAPTER",
-    status: "TICKETS_LIVE",
+    status: "COMPLETED",
     host: "Casey",
     description:
       "Begin the journey in Ireland's lakeland region. Where determination meets opportunity in an intimate setting designed for transformation.",
@@ -52,7 +52,7 @@ export const events: Event[] = [
     city: "Limerick",
     county: "County Limerick",
     theme: "THE TREATY CITY",
-    status: "TICKETS_LIVE",
+    status: "COMPLETED",
     host: "TBD",
     description:
       "The treaty city welcomes ambitious professionals. Connect with Munster's finest in a city known for its fighting spirit.",
@@ -94,11 +94,11 @@ export const events: Event[] = [
     city: "Belfast",
     county: "Northern Ireland",
     theme: "THE NORTHERN POWERHOUSE",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "Sean Casey",
     description:
       "Cross the border to Belfast. A city transformed, now home to tech giants and ambitious entrepreneurs ready to level up.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/eVq9ASem0bj039AfkBeEo0P",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Belfast",
@@ -296,6 +296,8 @@ export function getStatusLabel(status: EventStatus): string {
       return "Waitlist Open";
     case "COMING_SOON":
       return "Tickets Coming Soon";
+    case "COMPLETED":
+      return "Completed";
   }
 }
 
@@ -307,5 +309,7 @@ export function getStatusColor(status: EventStatus): string {
       return "bg-status-waitlist";
     case "COMING_SOON":
       return "bg-status-coming";
+    case "COMPLETED":
+      return "bg-text-secondary";
   }
 }

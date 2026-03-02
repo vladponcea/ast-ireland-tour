@@ -17,6 +17,8 @@ export function StatusBadge({ status, className = "" }: StatusBadgeProps) {
         return "bg-status-waitlist/20 text-status-waitlist border-status-waitlist/30";
       case "COMING_SOON":
         return "text-[#22C55E] bg-transparent border-transparent";
+      case "COMPLETED":
+        return "bg-text-secondary/20 text-text-secondary border-text-secondary/30";
     }
   };
 

@@ -12,6 +12,7 @@ interface EventCardProps {
 
 export function EventCard({ event, index, onSelect }: EventCardProps) {
   const isLeft = index % 2 === 0;
+  const isCompleted = event.status === "COMPLETED";
   const ctaText = event.status === "TICKETS_LIVE" ? "Buy Tickets" : "Join the Waitlist";
 
   return (
@@ -74,15 +75,17 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           </p>
 
           {/* CTA */}
-          <motion.button
-            onClick={() => onSelect(event)}
-            className={`text-[#FF883E] hover:text-white hover:bg-[#FF883E] border-2 border-[#FF883E] px-6 py-2 rounded-full transition-all mt-4 ${
-              isLeft ? "" : "lg:ml-auto lg:block"
-            }`}
-            whileHover={{ scale: 1.02 }}
-          >
-            <span className="font-medium">{ctaText}</span>
-          </motion.button>
+          {!isCompleted && (
+            <motion.button
+              onClick={() => onSelect(event)}
+              className={`text-[#FF883E] hover:text-white hover:bg-[#FF883E] border-2 border-[#FF883E] px-6 py-2 rounded-full transition-all mt-4 ${
+                isLeft ? "" : "lg:ml-auto lg:block"
+              }`}
+              whileHover={{ scale: 1.02 }}
+            >
+              <span className="font-medium">{ctaText}</span>
+            </motion.button>
+          )}
         </div>
       </div>
     </motion.div>

@@ -148,8 +148,9 @@ export function OptInForm({
   isLoading = false,
   preSelectedEventId,
 }: OptInFormProps) {
+  const availableEvents = events.filter((e) => e.status !== "COMPLETED");
   const [selectedEventId, setSelectedEventId] = useState(
-    preSelectedEventId || events[0]?.id || ""
+    preSelectedEventId || availableEvents[0]?.id || ""
   );
   const [selectedCountry, setSelectedCountry] = useState(countryCodes[0]);
   const [formData, setFormData] = useState<FormData>({
@@ -212,7 +213,7 @@ export function OptInForm({
           onChange={(e) => setSelectedEventId(e.target.value)}
           className="w-full px-4 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary focus:border-accent focus:outline-none transition-colors"
         >
-          {events.map((event) => (
+          {events.filter((event) => event.status !== "COMPLETED").map((event) => (
             <option key={event.id} value={event.id}>
               {event.date.replace(/, \d{4}$/, "")} - {event.city} ({getStatusLabel(event.status)})
             </option>
