@@ -130,6 +130,15 @@ const countryCodes = [
   { code: "+263", country: "Zimbabwe", flag: "🇿🇼" },
 ];
 
+const irishCounties = [
+  "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry",
+  "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry",
+  "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford",
+  "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon",
+  "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath",
+  "Wexford", "Wicklow",
+];
+
 interface OptInFormProps {
   onSubmit: (data: FormData, selectedEvent: Event) => void;
   isLoading?: boolean;
@@ -141,6 +150,7 @@ interface FormData {
   lastName: string;
   email: string;
   phone: string;
+  county: string;
 }
 
 export function OptInForm({
@@ -158,6 +168,7 @@ export function OptInForm({
     lastName: "",
     email: "",
     phone: "",
+    county: "",
   });
 
   const selectedEvent = events.find((e) => e.id === selectedEventId);
@@ -272,6 +283,29 @@ export function OptInForm({
             onChange={handleChange}
             className="w-full px-4 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary placeholder:text-text-secondary/50 focus:border-accent focus:outline-none transition-colors"
           />
+        </div>
+
+        <div>
+          <label htmlFor="county" className="sr-only">
+            County
+          </label>
+          <select
+            id="county"
+            name="county"
+            required
+            value={formData.county}
+            onChange={(e) => setFormData((prev) => ({ ...prev, county: e.target.value }))}
+            className="w-full px-4 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary focus:border-accent focus:outline-none transition-colors"
+          >
+            <option value="" disabled>
+              Select Your County
+            </option>
+            {irishCounties.map((county) => (
+              <option key={county} value={county}>
+                {county}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div>

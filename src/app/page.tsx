@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   const handleFormSubmit = async (
-    formData: { firstName: string; lastName: string; email: string; phone: string },
+    formData: { firstName: string; lastName: string; email: string; phone: string; county: string },
     event: Event
   ) => {
     // Send data to Make.com webhook
@@ -42,6 +42,7 @@ export default function Home() {
           lastName: formData.lastName,
           email: formData.email,
           phone: formData.phone,
+          county: formData.county,
           event: {
             id: event.id,
             city: event.city,
