@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeInUp } from "../animations";
 import { EventCard } from "../ui/EventCard";
-import { events, Event } from "@/lib/events";
+import { getUpcomingEvents, Event } from "@/lib/events";
 
 interface RoadmapProps {
   onEventSelect: (event: Event) => void;
@@ -115,7 +115,7 @@ export function Roadmap({ onEventSelect }: RoadmapProps) {
 
           {/* Event cards */}
           <div className="space-y-24 md:space-y-32 relative z-10">
-            {events.map((event, index) => (
+            {getUpcomingEvents().map((event, index) => (
               <EventCard
                 key={event.id}
                 event={event}

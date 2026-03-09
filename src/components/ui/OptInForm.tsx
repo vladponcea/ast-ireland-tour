@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
-import { events, Event, getStatusLabel } from "@/lib/events";
+import { events, Event, getStatusLabel, getUpcomingEvents } from "@/lib/events";
 
 const countryCodes = [
   { code: "+353", country: "Ireland", flag: "🇮🇪" },
@@ -158,7 +158,7 @@ export function OptInForm({
   isLoading = false,
   preSelectedEventId,
 }: OptInFormProps) {
-  const availableEvents = events.filter((e) => e.status !== "COMPLETED");
+  const availableEvents = getUpcomingEvents();
   const [selectedEventId, setSelectedEventId] = useState(
     preSelectedEventId || availableEvents[0]?.id || ""
   );
@@ -224,7 +224,7 @@ export function OptInForm({
           onChange={(e) => setSelectedEventId(e.target.value)}
           className="w-full px-4 py-3 bg-background border border-text-secondary/30 rounded-sm text-text-primary focus:border-accent focus:outline-none transition-colors"
         >
-          {events.filter((event) => event.status !== "COMPLETED").map((event) => (
+          {availableEvents.map((event) => (
             <option key={event.id} value={event.id}>
               {event.date.replace(/, \d{4}$/, "")} - {event.city} ({getStatusLabel(event.status)})
             </option>

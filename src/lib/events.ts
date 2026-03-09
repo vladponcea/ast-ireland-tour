@@ -278,6 +278,10 @@ export const events: Event[] = [
   },
 ];
 
+export function getUpcomingEvents(): Event[] {
+  return events.filter((event) => event.status !== "COMPLETED");
+}
+
 export function getEventByCity(city: string): Event | undefined {
   return events.find(
     (event) => event.city.toLowerCase() === city.toLowerCase()

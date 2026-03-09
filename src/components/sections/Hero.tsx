@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Button } from "../ui/Button";
-import { events } from "@/lib/events";
+import { getUpcomingEvents } from "@/lib/events";
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -18,17 +18,18 @@ export function Hero({ onOpenModal }: HeroProps) {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
-  // Cycling city display
+  // Cycling city display - only upcoming events
+  const upcomingEvents = getUpcomingEvents();
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentCityIndex((prev) => (prev + 1) % events.length);
+      setCurrentCityIndex((prev) => (prev + 1) % upcomingEvents.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [upcomingEvents.length]);
 
-  const currentEvent = events[currentCityIndex];
+  const currentEvent = upcomingEvents[currentCityIndex];
 
   // Custom background positions for specific cities
   const bgPositions: Record<string, string> = {
