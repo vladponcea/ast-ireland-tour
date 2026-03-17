@@ -115,11 +115,11 @@ export const events: Event[] = [
     city: "Meath",
     county: "County Meath",
     theme: "THE ROYAL COUNTY",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "James Doyle",
     description:
       "The Royal County calls. Ancient heritage meets modern ambition in the heart of Ireland's Ancient East.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/cNidR8a5KgDkbG67S9eEo0R",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Meath",
