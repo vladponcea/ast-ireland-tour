@@ -73,7 +73,7 @@ export const events: Event[] = [
     city: "Cork",
     county: "County Cork",
     theme: "THE REBEL COUNTY",
-    status: "TICKETS_LIVE",
+    status: "COMPLETED",
     host: "Tiann, Sean Coffey",
     description:
       "The rebel county rises. Experience world-class training in Ireland's second city, where innovation meets tradition.",
@@ -136,11 +136,11 @@ export const events: Event[] = [
     city: "Wexford",
     county: "County Wexford",
     theme: "THE MODEL COUNTY",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "TBD",
     description:
       "Summer arrives in the sunny southeast. Wexford's golden coastline provides the backdrop for your next breakthrough.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/28E4gy5Pu1Iq8tU0pHeEo0S",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Wexford",
