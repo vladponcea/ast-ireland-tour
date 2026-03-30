@@ -111,7 +111,7 @@ export const events: Event[] = [
   {
     id: "meath-may-2026",
     month: "May",
-    date: "May 30, 2026",
+    date: "May 23, 2026",
     city: "Meath",
     county: "County Meath",
     theme: "THE ROYAL COUNTY",
@@ -124,8 +124,8 @@ export const events: Event[] = [
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Meath",
       location: "Meath",
-      startTime: "2026-05-30T09:00:00",
-      endTime: "2026-05-30T18:00:00",
+      startTime: "2026-05-23T09:00:00",
+      endTime: "2026-05-23T18:00:00",
     },
     image: "/images/cities/meath.jpg",
   },
