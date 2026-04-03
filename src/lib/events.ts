@@ -7,6 +7,17 @@ export interface CalendarDetails {
   endTime: string;
 }
 
+export interface VipAddOn {
+  title: string;
+  description: string;
+  includes: string[];
+  date: string;
+  departure: string;
+  capacity: number;
+  price: string;
+  stripeLink: string;
+}
+
 export interface Event {
   id: string;
   month: string;
@@ -21,6 +32,7 @@ export interface Event {
   whatsappLink: string;
   calendarDetails: CalendarDetails;
   image?: string;
+  vipAddOn?: VipAddOn;
 }
 
 export const events: Event[] = [
@@ -107,6 +119,20 @@ export const events: Event[] = [
       endTime: "2026-04-25T18:00:00",
     },
     image: "/images/cities/belfast.jpg",
+    vipAddOn: {
+      title: "Private Dinner",
+      description: "Following the Mastermind, join a small circle of guests for an intimate dinner — great food and even better conversation.",
+      includes: [
+        "Post-Mastermind dinner at The Galgorm",
+        "Intimate setting with fellow entrepreneurs",
+        "Great food and even better conversation",
+      ],
+      date: "Saturday 25th April",
+      departure: "Post-Mastermind at The Galgorm",
+      capacity: 20,
+      price: "\u20AC100",
+      stripeLink: "https://buy.stripe.com/28E00ia5K72K4dE0pHeEo0T",
+    },
   },
   {
     id: "meath-may-2026",
