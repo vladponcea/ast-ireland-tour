@@ -94,7 +94,7 @@ export const events: Event[] = [
     city: "Belfast",
     county: "Northern Ireland",
     theme: "THE NORTHERN POWERHOUSE",
-    status: "TICKETS_LIVE",
+    status: "COMPLETED",
     host: "Sean Casey",
     description:
       "Cross the border to Belfast. A city transformed, now home to tech giants and ambitious entrepreneurs ready to level up.",
