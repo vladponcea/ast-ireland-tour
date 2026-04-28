@@ -7,6 +7,15 @@ export interface CalendarDetails {
   endTime: string;
 }
 
+export interface TicketOption {
+  id: string;
+  name: string;
+  price: string;
+  summary: string;
+  inclusions?: string[];
+  stripeLink: string;
+}
+
 export interface Event {
   id: string;
   month: string;
@@ -21,6 +30,7 @@ export interface Event {
   whatsappLink: string;
   calendarDetails: CalendarDetails;
   image?: string;
+  tickets?: TicketOption[];
 }
 
 export const events: Event[] = [
@@ -153,23 +163,50 @@ export const events: Event[] = [
   {
     id: "galway-jul-2026",
     month: "July",
-    date: "July 25, 2026",
+    date: "July 31, 2026",
     city: "Galway",
     county: "County Galway",
     theme: "THE CITY OF TRIBES",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "TBD",
     description:
-      "The cultural heart of the West. Galway's creative energy and wild Atlantic backdrop fuel transformation.",
-    stripeLink: "",
+      "The cultural heart of the West. Galway's creative energy and wild Atlantic backdrop fuel transformation. Friday evening mastermind at The Dean Hotel, with an optional Saturday Galway Races Experience.",
+    stripeLink: "https://buy.stripe.com/8x25kC7XC0EmdOe3BTeEo10",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Galway",
-      location: "Galway",
-      startTime: "2026-07-25T09:00:00",
-      endTime: "2026-07-25T18:00:00",
+      location: "The Dean Hotel, Galway",
+      startTime: "2026-07-31T16:30:00",
+      endTime: "2026-07-31T20:30:00",
     },
     image: "/images/cities/galway.jpg",
+    tickets: [
+      {
+        id: "galway-roadshow-only",
+        name: "Roadshow Only",
+        price: "€60",
+        summary: "Friday evening mastermind at The Dean Hotel, 4:30 - 8:30pm.",
+        stripeLink: "https://buy.stripe.com/8x25kC7XC0EmdOe3BTeEo10",
+      },
+      {
+        id: "galway-roadshow-races",
+        name: "Roadshow + Galway Races Experience",
+        price: "€150",
+        summary: "Friday roadshow plus Saturday's Premium Festival Package at the Galway Races.",
+        inclusions: [
+          "Friday evening mastermind, 4:30 - 8:30pm",
+          "Saturday 1st Aug Races Day, 12:30 - 6pm",
+          "Admission ticket",
+          "Grandstand reserved seating badge",
+          "Access to The Winning Post bar with panoramic finish-line views",
+          "Racecard",
+          "€5 betting voucher",
+          "€7 drink voucher",
+          "Shuttle bus to and from the races",
+        ],
+        stripeLink: "https://buy.stripe.com/bJefZg2DigDkeSiegxeEo11",
+      },
+    ],
   },
   {
     id: "waterford-aug-2026",

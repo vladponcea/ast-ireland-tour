@@ -10,7 +10,7 @@ import {
   FAQ,
 } from "@/components/sections";
 import { Modal, OptInForm } from "@/components/ui";
-import { Event } from "@/lib/events";
+import { Event, TicketOption } from "@/lib/events";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +28,8 @@ export default function Home() {
 
   const handleFormSubmit = async (
     formData: { firstName: string; lastName: string; email: string; phone: string; county: string },
-    event: Event
+    event: Event,
+    ticket?: TicketOption,
   ) => {
     // Send data to Make.com webhook
     try {
@@ -51,6 +52,9 @@ export default function Home() {
             month: event.month,
             status: event.status,
           },
+          ticket: ticket
+            ? { id: ticket.id, name: ticket.name, price: ticket.price }
+            : null,
           submittedAt: new Date().toISOString(),
         }),
       });
@@ -58,9 +62,11 @@ export default function Home() {
       console.error("Webhook error:", error);
     }
 
-    if (event.status === "TICKETS_LIVE" && event.stripeLink) {
+    const checkoutLink = ticket?.stripeLink || event.stripeLink;
+
+    if (event.status === "TICKETS_LIVE" && checkoutLink) {
       // Redirect to Stripe
-      window.location.href = event.stripeLink;
+      window.location.href = checkoutLink;
     } else {
       // Add to waitlist - redirect to thank you page
       window.location.href = `/thank-you?event=${event.id}&waitlist=true`;

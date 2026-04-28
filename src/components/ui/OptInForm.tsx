@@ -3,7 +3,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
-import { events, Event, getStatusLabel, getUpcomingEvents } from "@/lib/events";
+import {
+  events,
+  Event,
+  TicketOption,
+  getStatusLabel,
+  getUpcomingEvents,
+} from "@/lib/events";
 
 const countryCodes = [
   { code: "+353", country: "Ireland", flag: "🇮🇪" },
@@ -140,7 +146,11 @@ const irishCounties = [
 ];
 
 interface OptInFormProps {
-  onSubmit: (data: FormData, selectedEvent: Event) => void;
+  onSubmit: (
+    data: FormData,
+    selectedEvent: Event,
+    selectedTicket?: TicketOption
+  ) => void;
   isLoading?: boolean;
   preSelectedEventId?: string;
 }
@@ -172,6 +182,11 @@ export function OptInForm({
   });
 
   const selectedEvent = events.find((e) => e.id === selectedEventId);
+  const eventTickets = selectedEvent?.tickets;
+  const [chosenTicketId, setChosenTicketId] = useState<string>("");
+  const selectedTicket =
+    eventTickets?.find((t) => t.id === chosenTicketId) ?? eventTickets?.[0];
+  const selectedTicketId = selectedTicket?.id ?? "";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -190,7 +205,7 @@ export function OptInForm({
         ...formData,
         phone: cleanPhone,
       };
-      onSubmit(fullFormData, selectedEvent);
+      onSubmit(fullFormData, selectedEvent, selectedTicket);
     }
   };
 
@@ -231,6 +246,59 @@ export function OptInForm({
           ))}
         </select>
       </div>
+
+      {/* Ticket Type Selection */}
+      {eventTickets && eventTickets.length > 0 && (
+        <div>
+          <label className="block text-sm font-medium text-text-secondary mb-2">
+            Select Ticket Type
+          </label>
+          <div className="space-y-3">
+            {eventTickets.map((ticket) => {
+              const isSelected = ticket.id === selectedTicketId;
+              return (
+                <label
+                  key={ticket.id}
+                  className={`flex gap-3 p-4 border rounded-sm cursor-pointer transition-colors ${
+                    isSelected
+                      ? "border-accent bg-accent/5"
+                      : "border-text-secondary/30 hover:border-text-secondary/60"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="ticket"
+                    value={ticket.id}
+                    checked={isSelected}
+                    onChange={() => setChosenTicketId(ticket.id)}
+                    className="mt-1 accent-accent"
+                  />
+                  <div className="flex-1">
+                    <div className="flex items-baseline justify-between gap-2">
+                      <span className="font-medium text-text-primary">
+                        {ticket.name}
+                      </span>
+                      <span className="text-text-primary font-semibold whitespace-nowrap">
+                        {ticket.price}
+                      </span>
+                    </div>
+                    <p className="text-sm text-text-secondary mt-1">
+                      {ticket.summary}
+                    </p>
+                    {ticket.inclusions && ticket.inclusions.length > 0 && (
+                      <ul className="mt-2 space-y-1 text-xs text-text-secondary list-disc list-inside">
+                        {ticket.inclusions.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </label>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Form Fields */}
       <div className="space-y-4">
