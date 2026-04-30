@@ -128,12 +128,12 @@ export const events: Event[] = [
     status: "TICKETS_LIVE",
     host: "James Doyle",
     description:
-      "The Royal County calls. Ancient heritage meets modern ambition in the heart of Ireland's Ancient East.",
+      "The Royal County calls. Ancient heritage meets modern ambition in the heart of Ireland's Ancient East, hosted at Knightsbrook Hotel Spa and Golf Resort, Dublin Rd, Iffernock, Trim, Co. Meath.",
     stripeLink: "https://buy.stripe.com/cNidR8a5KgDkbG67S9eEo0R",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Meath",
-      location: "Meath",
+      location: "Knightsbrook Hotel Spa and Golf Resort, Dublin Rd, Iffernock, Trim, Co. Meath",
       startTime: "2026-05-23T09:00:00",
       endTime: "2026-05-23T18:00:00",
     },
@@ -149,12 +149,12 @@ export const events: Event[] = [
     status: "TICKETS_LIVE",
     host: "TBD",
     description:
-      "Summer arrives in the sunny southeast. Wexford's golden coastline provides the backdrop for your next breakthrough.",
+      "Summer arrives in the sunny southeast at the National Opera House, Wexford. The southeast's golden coastline provides the backdrop for your next breakthrough.",
     stripeLink: "https://buy.stripe.com/28E4gy5Pu1Iq8tU0pHeEo0S",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Wexford",
-      location: "Wexford",
+      location: "National Opera House, High St, Townparks, Wexford, Y35 FEP3",
       startTime: "2026-06-27T09:00:00",
       endTime: "2026-06-27T18:00:00",
     },
