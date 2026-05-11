@@ -191,7 +191,7 @@ export const events: Event[] = [
       {
         id: "galway-roadshow-races",
         name: "Roadshow + Galway Races Experience",
-        price: "€150",
+        price: "€199",
         summary: "Friday roadshow plus Saturday's Premium Festival Package at the Galway Races.",
         inclusions: [
           "Friday evening mastermind, 4:30 - 8:30pm",
