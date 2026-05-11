@@ -145,7 +145,7 @@ export const events: Event[] = [
     date: "June 27, 2026",
     city: "Wexford",
     county: "County Wexford",
-    theme: "THE MODEL COUNTY",
+    theme: "AI & SALES WORKSHOP",
     status: "TICKETS_LIVE",
     host: "TBD",
     description:
@@ -155,10 +155,19 @@ export const events: Event[] = [
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Wexford",
       location: "National Opera House, High St, Townparks, Wexford, Y35 FEP3",
-      startTime: "2026-06-27T09:00:00",
-      endTime: "2026-06-27T18:00:00",
+      startTime: "2026-06-27T11:00:00",
+      endTime: "2026-06-27T14:00:00",
     },
     image: "/images/cities/wexford.jpg",
+    tickets: [
+      {
+        id: "wexford-ai-sales-workshop",
+        name: "AI & Sales Workshop",
+        price: "€50",
+        summary: "Saturday workshop at the National Opera House, Wexford, 11:00am - 2:00pm.",
+        stripeLink: "https://buy.stripe.com/28E4gy5Pu1Iq8tU0pHeEo0S",
+      },
+    ],
   },
   {
     id: "galway-jul-2026",
