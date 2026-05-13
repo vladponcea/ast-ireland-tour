@@ -145,7 +145,7 @@ export const events: Event[] = [
     date: "June 27, 2026",
     city: "Wexford",
     county: "County Wexford",
-    theme: "AI & SALES WORKSHOP",
+    theme: "AI & PERSONAL BRANDING",
     status: "TICKETS_LIVE",
     host: "TBD",
     description:
