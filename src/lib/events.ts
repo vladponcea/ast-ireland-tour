@@ -161,8 +161,8 @@ export const events: Event[] = [
     image: "/images/cities/wexford.jpg",
     tickets: [
       {
-        id: "wexford-ai-sales-workshop",
-        name: "AI & Sales Workshop",
+        id: "wexford-ai-personal-branding-workshop",
+        name: "AI & Personal Branding Workshop",
         price: "€50",
         summary: "Saturday workshop at the National Opera House, Wexford, 11:00am - 2:00pm.",
         stripeLink: "https://buy.stripe.com/28E4gy5Pu1Iq8tU0pHeEo0S",
