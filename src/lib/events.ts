@@ -156,7 +156,7 @@ export const events: Event[] = [
       title: "AST Irish Entrepreneur Roadshow - Wexford",
       location: "National Opera House, High St, Townparks, Wexford, Y35 FEP3",
       startTime: "2026-06-27T11:00:00",
-      endTime: "2026-06-27T14:00:00",
+      endTime: "2026-06-27T15:00:00",
     },
     image: "/images/cities/wexford.jpg",
     tickets: [
@@ -164,7 +164,7 @@ export const events: Event[] = [
         id: "wexford-ai-personal-branding-workshop",
         name: "AI & Personal Branding Workshop",
         price: "€50",
-        summary: "Saturday workshop at the National Opera House, Wexford, 11:00am - 2:00pm.",
+        summary: "Saturday workshop at the National Opera House, Wexford, 11:00am - 3:00pm.",
         stripeLink: "https://buy.stripe.com/28E4gy5Pu1Iq8tU0pHeEo0S",
       },
     ],
@@ -186,7 +186,7 @@ export const events: Event[] = [
       title: "AST Irish Entrepreneur Roadshow - Galway",
       location: "The Dean Hotel, Galway",
       startTime: "2026-07-31T16:30:00",
-      endTime: "2026-07-31T16:50:00",
+      endTime: "2026-07-31T20:30:00",
     },
     image: "/images/cities/galway.jpg",
     tickets: [
@@ -194,7 +194,7 @@ export const events: Event[] = [
         id: "galway-roadshow-only",
         name: "Exclusive Sales Workshop",
         price: "€60",
-        summary: "Friday Exclusive Sales Workshop at The Dean Hotel, 4:30 - 4:50pm.",
+        summary: "Friday Exclusive Sales Workshop at The Dean Hotel, 4:30 - 8:30pm.",
         stripeLink: "https://buy.stripe.com/8x25kC7XC0EmdOe3BTeEo10",
       },
       {
@@ -203,7 +203,7 @@ export const events: Event[] = [
         price: "€199",
         summary: "Friday Exclusive Sales Workshop plus Saturday's Premium Festival Package at the Galway Races.",
         inclusions: [
-          "Friday Exclusive Sales Workshop, 4:30 - 4:50pm",
+          "Friday Exclusive Sales Workshop, 4:30 - 8:30pm",
           "Saturday 1st Aug Day at the Galway Races with AST, 12:30pm - late",
           "Admission ticket",
           "Grandstand reserved seating badge",
