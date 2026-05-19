@@ -15,6 +15,10 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
   const isCompleted = event.status === "COMPLETED";
   const ctaText = event.status === "TICKETS_LIVE" ? "Buy Tickets" : "Join the Waitlist";
 
+  const themeDashIndex = event.theme.indexOf(" – ");
+  const themeHead = themeDashIndex >= 0 ? event.theme.slice(0, themeDashIndex) : event.theme;
+  const themeTail = themeDashIndex >= 0 ? event.theme.slice(themeDashIndex + 3) : "";
+
   return (
     <motion.div
       initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
@@ -62,7 +66,14 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
 
           {/* Theme */}
           <p className="text-xs text-[#FF883E] uppercase tracking-[0.2em] font-semibold">
-            {event.theme}
+            {themeHead}
+            {themeTail && (
+              <>
+                {" –"}
+                <br />
+                {themeTail}
+              </>
+            )}
           </p>
 
           {/* City */}
