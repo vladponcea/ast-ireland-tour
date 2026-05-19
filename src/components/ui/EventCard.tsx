@@ -51,7 +51,8 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
         <div className={`space-y-4 ${isLeft ? "" : "lg:ml-auto"}`}>
           {/* Date */}
           <p className="text-sm text-text-secondary uppercase tracking-widest font-medium">
-            {event.date} &nbsp;·&nbsp; 12 PM to 4 PM
+            {event.date}
+            {event.time && <>&nbsp;·&nbsp;{event.time}</>}
           </p>
 
           {/* Status Badge */}
