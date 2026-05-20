@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Button } from "../ui/Button";
-import { getUpcomingEvents } from "@/lib/events";
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -18,32 +17,6 @@ export function Hero({ onOpenModal }: HeroProps) {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
-  // Cycling city display - only upcoming events
-  const upcomingEvents = getUpcomingEvents();
-  const [currentCityIndex, setCurrentCityIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCityIndex((prev) => (prev + 1) % upcomingEvents.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [upcomingEvents.length]);
-
-  const currentEvent = upcomingEvents[currentCityIndex];
-
-  // Custom background positions for specific cities
-  const bgPositions: Record<string, string> = {
-    dublin: "center 30%",
-    cavan: "center 40%",
-    wexford: "center 60%",
-    clare: "center 30%",
-    kerry: "center 40%",
-  };
-
-  const getBgPosition = (city: string) => {
-    return bgPositions[city.toLowerCase()] || "center";
-  };
-
   return (
     <section
       ref={containerRef}
@@ -56,21 +29,17 @@ export function Hero({ onOpenModal }: HeroProps) {
             className="absolute inset-0 z-0"
             style={{ y: backgroundY }}
           >
-            {/* Background Image with crossfade transition */}
-            <AnimatePresence>
-              <motion.div
-                key={currentCityIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="absolute inset-0 bg-cover bg-no-repeat scale-105"
-                style={{
-                  backgroundImage: `url('${currentEvent.image}')`,
-                  backgroundPosition: getBgPosition(currentEvent.city),
-                }}
-              />
-            </AnimatePresence>
+            {/* Background Video */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover scale-105"
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+            </video>
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/30" />
             {/* Bottom Gradient for text visibility */}
@@ -118,29 +87,6 @@ export function Hero({ onOpenModal }: HeroProps) {
                 </motion.div>
               </div>
             </div>
-
-            {/* Cycling City Name - Bottom Right */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.6 }}
-              className="absolute bottom-6 md:bottom-10 right-6 md:right-12 text-right hidden lg:block"
-            >
-              <motion.div
-                key={currentCityIndex}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.5 }}
-              >
-                <p className="text-white/60 text-sm uppercase tracking-widest mb-1">
-                  {currentEvent.month} 2026
-                </p>
-                <p className="font-display text-2xl italic text-white">
-                  {currentEvent.city}
-                </p>
-              </motion.div>
-            </motion.div>
           </div>
         </div>
       </div>
