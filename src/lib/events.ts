@@ -127,7 +127,7 @@ export const events: Event[] = [
     city: "Meath",
     county: "County Meath",
     theme: "ROADSHOW – KNIGHTSBROOK HOTEL, MEATH",
-    status: "TICKETS_LIVE",
+    status: "COMPLETED",
     host: "Eoin",
     description:
       "A high-energy full-day event covering sales, business, and mindset. Featuring speakers Warren, Luke, and Adam, hosted by Eoin.",
@@ -283,7 +283,7 @@ export const events: Event[] = [
       startTime: "2026-12-12T11:00:00",
       endTime: "2026-12-13T18:00:00",
     },
-    image: "/images/cities/dublin.jpg",
+    image: "/images/cities/dublin-mass-awakening.jpg",
   },
 ];
 
