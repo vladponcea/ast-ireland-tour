@@ -196,14 +196,14 @@ export const events: Event[] = [
       {
         id: "galway-roadshow-only",
         name: "Exclusive Sales Workshop",
-        price: "€60",
+        price: "€70",
         summary: "Friday Exclusive Sales Workshop at The Dean Hotel, 4:30 - 8:30pm.",
         stripeLink: "https://buy.stripe.com/8x25kC7XC0EmdOe3BTeEo10",
       },
       {
         id: "galway-roadshow-races",
         name: "Sales Workshop + Day at the Galway Races with AST",
-        price: "€199",
+        price: "€250",
         summary: "Friday Exclusive Sales Workshop plus Saturday's Premium Festival Package at the Galway Races.",
         inclusions: [
           "Friday Exclusive Sales Workshop, 4:30 - 8:30pm",
