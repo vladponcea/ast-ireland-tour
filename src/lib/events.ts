@@ -31,6 +31,7 @@ export interface Event {
   whatsappLink: string;
   calendarDetails: CalendarDetails;
   image?: string;
+  imageFit?: "cover" | "contain";
   tickets?: TicketOption[];
 }
 
@@ -192,6 +193,7 @@ export const events: Event[] = [
       endTime: "2026-07-31T20:30:00",
     },
     image: "/images/cities/galway.jpg",
+    imageFit: "contain",
     tickets: [
       {
         id: "galway-roadshow-only",

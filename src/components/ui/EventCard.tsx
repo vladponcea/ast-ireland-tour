@@ -37,11 +37,23 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
       >
         <div className="absolute inset-0 bg-background-secondary">
           {event.image ? (
-            <img
-              src={event.image}
-              alt={event.city}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            <>
+              {event.imageFit === "contain" && (
+                <img
+                  src={event.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl"
+                />
+              )}
+              <img
+                src={event.image}
+                alt={event.city}
+                className={`relative w-full h-full transition-transform duration-500 group-hover:scale-105 ${
+                  event.imageFit === "contain" ? "object-contain" : "object-cover"
+                }`}
+              />
+            </>
           ) : (
             <div className="w-full h-full flex items-center justify-center text-text-secondary">
               <span className="text-4xl font-display italic">{event.city}</span>
