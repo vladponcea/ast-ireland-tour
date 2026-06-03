@@ -150,7 +150,7 @@ export const events: Event[] = [
     city: "Wexford",
     county: "County Wexford",
     theme: "AI & PERSONAL BRANDING WORKSHOP – NATIONAL OPERA HOUSE, WEXFORD",
-    status: "TICKETS_LIVE",
+    status: "WAITLIST_OPEN",
     host: "TBD",
     description:
       "A hands-on workshop focused on harnessing AI and building a powerful personal brand.",
