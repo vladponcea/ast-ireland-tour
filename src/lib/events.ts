@@ -178,6 +178,7 @@ export const events: Event[] = [
         summary: "Friday Exclusive Sales Workshop plus Saturday's Premium Festival Package at the Galway Races.",
         inclusions: [
           "Friday Exclusive Sales Workshop, 4:30 - 8:30pm",
+          "Friday night group dinner with the AST team",
           "Saturday 1st Aug Day at the Galway Races with AST, 12:30pm - late",
           "Admission ticket",
           "Grandstand reserved seating badge",
@@ -186,6 +187,7 @@ export const events: Event[] = [
           "€5 betting voucher",
           "€7 drink voucher",
           "Shuttle bus to and from the races",
+          "Sunday beach day at Salthill to wind down",
         ],
         stripeLink: "https://buy.stripe.com/bJefZg2DigDkeSiegxeEo11",
       },
