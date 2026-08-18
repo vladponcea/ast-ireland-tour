@@ -33,6 +33,10 @@ export interface Event {
   image?: string;
   imageFit?: "cover" | "contain";
   tickets?: TicketOption[];
+  ctaOverride?: {
+    label: string;
+    scrollToEventId: string;
+  };
 }
 
 export const events: Event[] = [
@@ -163,36 +167,10 @@ export const events: Event[] = [
     },
     image: "/images/cities/galway.jpg",
     imageFit: "contain",
-    tickets: [
-      {
-        id: "galway-friday-single-day",
-        name: "Friday Single Day",
-        price: "€99",
-        summary: "Friday Mastermind and Workshop only, 4:30pm - 8:30pm.",
-        stripeLink: "https://buy.stripe.com/dRm5kCb9Ocn49xY2xPeEo1d",
-      },
-      {
-        id: "galway-saturday-single-day",
-        name: "Saturday Single Day",
-        price: "€99",
-        summary: "Galway Races only on Saturday, 12:30pm - late.",
-        stripeLink: "https://buy.stripe.com/4gM00icdS9aSaC26O5eEo1g",
-      },
-      {
-        id: "galway-two-day-ticket",
-        name: "2 Days Ticket",
-        price: "€199",
-        summary: "Friday Mastermind and Workshop plus Saturday at the Galway Races.",
-        stripeLink: "https://buy.stripe.com/fZu9AScdSfzg5hIb4leEo1e",
-      },
-      {
-        id: "galway-two-day-vip-ticket",
-        name: "2 Days VIP",
-        price: "€250",
-        summary: "Friday Mastermind and Workshop, Saturday at the Galway Races, and VIP dinner on Friday evening.",
-        stripeLink: "https://buy.stripe.com/dRm8wO5Pu86ObG65K1eEo1f",
-      },
-    ],
+    ctaOverride: {
+      label: "Register for Next Event",
+      scrollToEventId: "donegal-aug-2026",
+    },
   },
   {
     id: "donegal-aug-2026",
@@ -202,11 +180,11 @@ export const events: Event[] = [
     city: "Donegal",
     county: "County Donegal",
     theme: "IDENTITY & PURPOSE WORKSHOP –",
-    status: "COMING_SOON",
+    status: "TICKETS_LIVE",
     host: "TBD",
     description:
       "A deep-dive full-day workshop exploring your core values, beliefs, identity, and purpose as an entrepreneur.",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/9B64gy6Ty2MudOeegxeEo1r",
     whatsappLink: "",
     calendarDetails: {
       title: "AST Irish Entrepreneur Roadshow - Donegal",
@@ -214,6 +192,7 @@ export const events: Event[] = [
       startTime: "2026-08-29T11:00:00",
       endTime: "2026-08-29T17:00:00",
     },
+    image: "/images/cities/donegal.jpg",
   },
   {
     id: "dublin-dec-2026",

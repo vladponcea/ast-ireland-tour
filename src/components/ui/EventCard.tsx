@@ -13,7 +13,21 @@ interface EventCardProps {
 export function EventCard({ event, index, onSelect }: EventCardProps) {
   const isLeft = index % 2 === 0;
   const isCompleted = event.status === "COMPLETED";
-  const ctaText = event.status === "TICKETS_LIVE" ? "Buy Tickets" : "Join the Waitlist";
+  const ctaText = event.ctaOverride
+    ? event.ctaOverride.label
+    : event.status === "TICKETS_LIVE"
+      ? "Buy Tickets"
+      : "Join the Waitlist";
+
+  const handleCtaClick = () => {
+    if (event.ctaOverride) {
+      document
+        .getElementById(event.ctaOverride.scrollToEventId)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    onSelect(event);
+  };
 
   const themeDashIndex = event.theme.indexOf(" – ");
   const themeHead = themeDashIndex >= 0 ? event.theme.slice(0, themeDashIndex) : event.theme;
@@ -28,6 +42,7 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
       className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
         isLeft ? "" : "lg:flex-row-reverse"
       }`}
+      id={event.id}
     >
       {/* Image */}
       <motion.div
@@ -101,7 +116,7 @@ export function EventCard({ event, index, onSelect }: EventCardProps) {
           {/* CTA */}
           {!isCompleted && (
             <motion.button
-              onClick={() => onSelect(event)}
+              onClick={handleCtaClick}
               className={`text-[#FF883E] hover:text-white hover:bg-[#FF883E] border-2 border-[#FF883E] px-6 py-2 rounded-full transition-all mt-4 ${
                 isLeft ? "" : "lg:ml-auto lg:block"
               }`}
