@@ -193,6 +193,7 @@ export const events: Event[] = [
       endTime: "2026-08-29T17:00:00",
     },
     image: "/images/cities/donegal.jpg",
+    imageFit: "contain",
   },
   {
     id: "dublin-dec-2026",
